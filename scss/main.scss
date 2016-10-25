@@ -1,0 +1,112 @@
+@import "mixins";
+
+$gold: #F3C078;
+$light-grey: #E2E2E2;
+$black: #383838;
+$off-white: #FFFCEF;
+$white: #FFFFFF;
+$navy: #084369;
+
+
+* {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+h1 {
+	font-size: 4em;
+	margin: 0;
+}
+h2 {
+	font-size: 2.35em;
+	margin: 0;
+}
+h3 {
+	font-size: 1.35em;
+	margin: 0;
+}
+p {
+	margin: 0;
+}
+body {
+	font-size:16px;
+	font-family: Helvetica;
+	color: $gold;
+}
+.hidden {
+	opacity: 0;
+}
+
+.container {
+	@include flex-display;
+	@include flex-direction-row;
+	width: 100%;
+
+	.navbar {
+		@include flex-display;
+		@include flex-direction-row;
+		@include justify-content(space-between);
+
+		position: fixed;
+		z-index: 10;
+		height: 60px;
+		width: 100%;
+		padding: 12px 60px;
+		background-color: $white;
+		border-bottom: 1px solid $gold;
+
+		.navbar-item {
+			position: relative;
+			margin: auto 0px;
+			width: auto;
+
+			cursor: pointer;
+			text-align: center;
+		}
+	}
+
+	main {
+		width: 100%;
+
+		section {
+			position: relative;
+			height: 100%;
+			width: 100%;
+		}
+		section#landing {
+			padding: 30px 0;
+
+			div.landing-gold-background {
+				height: 100%;
+				width: 100%;
+				padding: 30px 0;
+				background-color: rgba(243, 192, 120, 0.4);
+
+				div#landing-image {
+					height: 100%;
+					width: 100%;
+					background-size: cover;
+					background-position: top center;
+					background-repeat: no-repeat;
+					background-image: url('../images/wedding-lights.png');
+
+					div.gold-mask {
+						width:100%;
+				  		height:100%;
+				  		background-color:rgba(243, 192, 120, 0.4);
+				  		color: $gold;
+					}
+				}
+			}
+
+			div.landing-page-headline {
+				position: absolute;
+				left: 50px;
+				bottom: 100px;
+				height: auto;
+				width: auto;
+			}
+		}
+	}
+}
