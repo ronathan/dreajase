@@ -181,5 +181,19 @@ body {
         .container main section#couple div.couple-desc div.couple-header {
           margin-top: 50px;
           text-align: right; }
+    .container main section#event-details {
+      padding: 60px 120px;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      background-color: #115A3C;
+      text-align: center; }
 
 /*# sourceMappingURL=main.css.map */

@@ -5,6 +5,7 @@ $light-grey: #E2E2E2;
 $black: #383838;
 $off-white: #FFFCEF;
 $white: #FFFFFF;
+$emerald: #115A3C;
 $navy: #084369;
 
 * {
@@ -193,6 +194,14 @@ body {
 					text-align: right;
 				}
 			}
+		}
+
+		section#event-details {
+			padding: 60px 120px;
+			@include flex-display;
+			@include flex-direction-column;
+			background-color: $emerald;
+			text-align: center;
 		}
 	}
 }
