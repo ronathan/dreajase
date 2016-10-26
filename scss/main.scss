@@ -7,27 +7,60 @@ $off-white: #FFFCEF;
 $white: #FFFFFF;
 $navy: #084369;
 
-
 * {
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+@font-face {
+	font-family: 'Nanum';
+	src: url('../fonts/NanumMyeongjo-Regular.eot'),
+       url('../fonts/NanumMyeongjo-Regular.ttf') format('truetype'),
+       url('../fonts/NanumMyeongjo-Regular.svg') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Nanum';
+	src: url('../fonts/NanumMyeongjo-Bold.eot'),
+       url('../fonts/NanumMyeongjo-Bold.ttf') format('truetype'),
+       url('../fonts/NanumMyeongjo-Bold.svg') format('svg');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Nanum';
+	src: url('../fonts/NanumMyeongjo-ExtraBold.eot'),
+       url('../fonts/NanumMyeongjo-ExtraBold.ttf') format('truetype'),
+       url('../fonts/NanumMyeongjo-ExtraBold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
 
 h1 {
+	font-family: 'Baskerville';
+	font-style: italic;
+	font-weight: 400;
 	font-size: 4em;
 	margin: 0;
 }
 h2 {
+	font-family: 'Baskerville';
 	font-size: 2.35em;
+	font-weight: 400;
+	font-style: italic;
 	margin: 0;
 }
 h3 {
+	font-family: 'Baskerville';
 	font-size: 1.35em;
+	font-weight: 400;
 	margin: 0;
 }
 p {
-	margin: 0;
+	font-family: 'Nanum';
+	color: $black;
+	margin: 12px 0px;
 }
 body {
 	font-size:16px;
@@ -106,6 +139,59 @@ body {
 				bottom: 100px;
 				height: auto;
 				width: auto;
+
+				text-align: center;
+
+				h2 {
+					font-family: 'Nanum';
+					color: $white;
+				}
+			}
+		}
+
+		section#couple {
+			@include flex-display;
+			@include flex-direction-row;
+			@include justify-content(space-between);
+			@include flex-wrap(wrap);
+			@include flex-align-items(center);
+			padding: 0 120px;
+
+			div.couple-image-container {
+				height: 100%;
+				margin-right: 100px;
+				width: 400px;
+
+				div.couple-image {
+					height: 100%;
+					background-size: cover;
+					background-position: top center;
+					background-repeat: no-repeat;
+					background-image: url('../images/thecouple.png');
+
+					div.gold-mask {
+						width:100%;
+				  		height:100%;
+				  		background-color:rgba(243, 192, 120, 0.4);
+				  		color: $gold;
+					}
+				}
+			}
+
+			div.couple-desc {
+				@include flex-display;
+				@include flex-direction-column;
+				
+				width: 400px;
+
+				div.couple-desc-writeup {
+
+				}
+
+				div.couple-header {
+					margin-top: 50px;
+					text-align: right;
+				}
 			}
 		}
 	}

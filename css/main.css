@@ -5,20 +5,45 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+@font-face {
+  font-family: 'Nanum';
+  src: url("../fonts/NanumMyeongjo-Regular.eot"), url("../fonts/NanumMyeongjo-Regular.ttf") format("truetype"), url("../fonts/NanumMyeongjo-Regular.svg") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'Nanum';
+  src: url("../fonts/NanumMyeongjo-Bold.eot"), url("../fonts/NanumMyeongjo-Bold.ttf") format("truetype"), url("../fonts/NanumMyeongjo-Bold.svg") format("svg");
+  font-weight: 600;
+  font-style: normal; }
+@font-face {
+  font-family: 'Nanum';
+  src: url("../fonts/NanumMyeongjo-ExtraBold.eot"), url("../fonts/NanumMyeongjo-ExtraBold.ttf") format("truetype"), url("../fonts/NanumMyeongjo-ExtraBold.svg") format("svg");
+  font-weight: 700;
+  font-style: normal; }
 h1 {
+  font-family: 'Baskerville';
+  font-style: italic;
+  font-weight: 400;
   font-size: 4em;
   margin: 0; }
 
 h2 {
+  font-family: 'Baskerville';
   font-size: 2.35em;
+  font-weight: 400;
+  font-style: italic;
   margin: 0; }
 
 h3 {
+  font-family: 'Baskerville';
   font-size: 1.35em;
+  font-weight: 400;
   margin: 0; }
 
 p {
-  margin: 0; }
+  font-family: 'Nanum';
+  color: #383838;
+  margin: 12px 0px; }
 
 body {
   font-size: 16px;
@@ -98,6 +123,63 @@ body {
         left: 50px;
         bottom: 100px;
         height: auto;
-        width: auto; }
+        width: auto;
+        text-align: center; }
+        .container main section#landing div.landing-page-headline h2 {
+          font-family: 'Nanum';
+          color: #FFFFFF; }
+    .container main section#couple {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: space-between;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: space-between;
+      justify-content: space-between;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 0 120px; }
+      .container main section#couple div.couple-image-container {
+        height: 100%;
+        margin-right: 100px;
+        width: 400px; }
+        .container main section#couple div.couple-image-container div.couple-image {
+          height: 100%;
+          background-size: cover;
+          background-position: top center;
+          background-repeat: no-repeat;
+          background-image: url("../images/thecouple.png"); }
+          .container main section#couple div.couple-image-container div.couple-image div.gold-mask {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(243, 192, 120, 0.4);
+            color: #F3C078; }
+      .container main section#couple div.couple-desc {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 400px; }
+        .container main section#couple div.couple-desc div.couple-header {
+          margin-top: 50px;
+          text-align: right; }
 
 /*# sourceMappingURL=main.css.map */
