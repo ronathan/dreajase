@@ -42,29 +42,31 @@ h1 {
 	font-family: 'Baskerville';
 	font-style: italic;
 	font-weight: 400;
-	font-size: 4em;
+	font-size: 6em;
 	margin: 0;
 }
 h2 {
 	font-family: 'Baskerville';
-	font-size: 2.35em;
+	font-size: 4em;
 	font-weight: 400;
 	font-style: italic;
 	margin: 0;
 }
 h3 {
 	font-family: 'Baskerville';
-	font-size: 1.35em;
+	font-size: 2em;
 	font-weight: 400;
 	margin: 0;
 }
 p {
 	font-family: 'Nanum';
+	font-size: 1.35em;
 	color: $black;
-	margin: 12px 0px;
+	margin: 1em 0px;
+	font-weight: 100;
 }
 body {
-	font-size:16px;
+	font-size: 12px;
 	font-family: Helvetica;
 	color: $gold;
 }
@@ -136,7 +138,7 @@ body {
 
 			div.landing-page-headline {
 				position: absolute;
-				left: 50px;
+				left: 48px;
 				bottom: 100px;
 				height: auto;
 				width: auto;
@@ -197,11 +199,99 @@ body {
 		}
 
 		section#event-details {
-			padding: 60px 120px;
 			@include flex-display;
 			@include flex-direction-column;
+
+			padding: 3em 10em;
+			height: auto;
 			background-color: $emerald;
 			text-align: center;
+
+			div.event-details-header {
+				margin: 2em auto;
+				
+				svg {
+					margin-top: 0.5em;
+				}
+			}
+			
+			div.event-details-menu {
+				margin: 2em auto;
+				@include flex-display;
+				@include flex-direction-row;
+				text-align: center;
+
+				div.event-details-menu-item {
+					padding: 12px 24px;
+					cursor: pointer;
+					h3 {
+						color: $white;
+					}
+				}
+				div.event-details-menu-item.selected {
+					border-bottom: 1px solid $gold;
+					
+					h3 {
+						color: $gold;
+					}
+				}
+			}
+
+			div.event-details-venue {
+				margin: 2em auto;
+
+				p {
+					margin: 0;
+					font-size: 2em;
+					color: $white;
+				}
+			}
+
+			div.event-details-venue-logo {
+				margin: 2em 0;
+			}
+
+			div.event-details-timeline {
+				margin: 2em auto;
+				@include flex-display;
+				@include flex-direction-row;
+				@include flex-wrap(wrap);
+				@include justify-content(center);
+				@include flex-align-items(center);
+
+				div.event-details-timeline-section {
+					@include flex-display;
+					@include flex-direction-column;
+					@include justify-content(center);
+					@include flex-align-items(center);
+
+					padding: 0 2em;
+					height: auto;
+					width: 400px;
+
+					div.event-details-timeline-item {
+						padding: 1em 0;
+						p {
+							margin: 0;
+							margin-top: 1em;
+							color: $white;
+						}
+					}
+				}
+
+				div.event-details-timeline-section:first-child {
+					text-align: right;
+					border-right: 1px solid $gold;
+				}
+				div.event-details-timeline-section:nth-child(2) {
+					text-align: left;
+				}
+			}
+
+			div.event-details-logo {
+				margin: 2em 0;
+			}
+
 		}
 	}
 }

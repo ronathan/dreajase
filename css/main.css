@@ -24,29 +24,31 @@ h1 {
   font-family: 'Baskerville';
   font-style: italic;
   font-weight: 400;
-  font-size: 4em;
+  font-size: 6em;
   margin: 0; }
 
 h2 {
   font-family: 'Baskerville';
-  font-size: 2.35em;
+  font-size: 4em;
   font-weight: 400;
   font-style: italic;
   margin: 0; }
 
 h3 {
   font-family: 'Baskerville';
-  font-size: 1.35em;
+  font-size: 2em;
   font-weight: 400;
   margin: 0; }
 
 p {
   font-family: 'Nanum';
+  font-size: 1.35em;
   color: #383838;
-  margin: 12px 0px; }
+  margin: 1em 0px;
+  font-weight: 100; }
 
 body {
-  font-size: 16px;
+  font-size: 12px;
   font-family: Helvetica;
   color: #F3C078; }
 
@@ -120,7 +122,7 @@ body {
             color: #F3C078; }
       .container main section#landing div.landing-page-headline {
         position: absolute;
-        left: 50px;
+        left: 48px;
         bottom: 100px;
         height: auto;
         width: auto;
@@ -182,7 +184,6 @@ body {
           margin-top: 50px;
           text-align: right; }
     .container main section#event-details {
-      padding: 60px 120px;
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
@@ -193,7 +194,101 @@ body {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
+      padding: 3em 10em;
+      height: auto;
       background-color: #115A3C;
       text-align: center; }
+      .container main section#event-details div.event-details-header {
+        margin: 2em auto; }
+        .container main section#event-details div.event-details-header svg {
+          margin-top: 0.5em; }
+      .container main section#event-details div.event-details-menu {
+        margin: 2em auto;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        text-align: center; }
+        .container main section#event-details div.event-details-menu div.event-details-menu-item {
+          padding: 12px 24px;
+          cursor: pointer; }
+          .container main section#event-details div.event-details-menu div.event-details-menu-item h3 {
+            color: #FFFFFF; }
+        .container main section#event-details div.event-details-menu div.event-details-menu-item.selected {
+          border-bottom: 1px solid #F3C078; }
+          .container main section#event-details div.event-details-menu div.event-details-menu-item.selected h3 {
+            color: #F3C078; }
+      .container main section#event-details div.event-details-venue {
+        margin: 2em auto; }
+        .container main section#event-details div.event-details-venue p {
+          margin: 0;
+          font-size: 2em;
+          color: #FFFFFF; }
+      .container main section#event-details div.event-details-venue-logo {
+        margin: 2em 0; }
+      .container main section#event-details div.event-details-timeline {
+        margin: 2em auto;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center; }
+        .container main section#event-details div.event-details-timeline div.event-details-timeline-section {
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+          padding: 0 2em;
+          height: auto;
+          width: 400px; }
+          .container main section#event-details div.event-details-timeline div.event-details-timeline-section div.event-details-timeline-item {
+            padding: 1em 0; }
+            .container main section#event-details div.event-details-timeline div.event-details-timeline-section div.event-details-timeline-item p {
+              margin: 0;
+              margin-top: 1em;
+              color: #FFFFFF; }
+        .container main section#event-details div.event-details-timeline div.event-details-timeline-section:first-child {
+          text-align: right;
+          border-right: 1px solid #F3C078; }
+        .container main section#event-details div.event-details-timeline div.event-details-timeline-section:nth-child(2) {
+          text-align: left; }
+      .container main section#event-details div.event-details-logo {
+        margin: 2em 0; }
 
 /*# sourceMappingURL=main.css.map */
