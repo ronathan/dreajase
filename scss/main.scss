@@ -237,61 +237,129 @@ body {
 				}
 			}
 
-			div.event-details-venue {
-				margin: 2em auto;
-
-				p {
-					margin: 0;
-					font-size: 2em;
-					color: $white;
-				}
+			div#event-details-item-christian {
+				display: none;
 			}
 
-			div.event-details-venue-logo {
-				margin: 2em 0;
-			}
+			div.event-details-item {
 
-			div.event-details-timeline {
-				margin: 2em auto;
-				@include flex-display;
-				@include flex-direction-row;
-				@include flex-wrap(wrap);
-				@include justify-content(center);
-				@include flex-align-items(center);
+				div.event-details-venue {
+					margin: 2em auto;
 
-				div.event-details-timeline-section {
-					@include flex-display;
-					@include flex-direction-column;
-					@include justify-content(center);
-					@include flex-align-items(center);
-
-					padding: 0 2em;
-					height: auto;
-					width: 400px;
-
-					div.event-details-timeline-item {
-						padding: 1em 0;
-						p {
-							margin: 0;
-							margin-top: 1em;
-							color: $white;
-						}
+					p {
+						margin: 0;
+						font-size: 2em;
+						color: $white;
 					}
 				}
 
-				div.event-details-timeline-section:first-child {
-					text-align: right;
-					border-right: 1px solid $gold;
+				div.event-details-venue-logo {
+					margin: 5em 0;
 				}
-				div.event-details-timeline-section:nth-child(2) {
-					text-align: left;
+
+				div.event-details-timeline {
+					margin: 5em auto;
+					@include flex-display;
+					@include flex-direction-row;
+					@include flex-wrap(wrap);
+					@include justify-content(center);
+					@include flex-align-items(center);
+
+					div.event-details-timeline-section {
+						@include flex-display;
+						@include flex-direction-column;
+						@include justify-content(center);
+						@include flex-align-items(center);
+
+						padding: 0 2em;
+						height: auto;
+						width: 400px;
+
+						div.event-details-timeline-item {
+							padding: 1em 0;
+							p {
+								margin: 0;
+								margin-top: 1em;
+								color: $white;
+							}
+						}
+					}
+
+					div.event-details-timeline-section:first-child {
+						text-align: right;
+						border-right: 1px solid $gold;
+					}
+					div.event-details-timeline-section:nth-child(2) {
+						text-align: left;
+					}
+				}
+
+				div.event-details-logo {
+					margin: 5em 0;
 				}
 			}
+		}
 
-			div.event-details-logo {
-				margin: 2em 0;
+		section#rsvp {
+			@include flex-display;
+			@include flex-direction-row;
+			@include justify-content(center);
+			@include flex-align-items(center);
+
+			padding: 3em 10em;
+			height: auto;
+			background-color: $black;
+			text-align: center;
+
+			div.rsvp-card {
+				@include flex-display;
+				@include flex-direction-column;
+				
+				max-width: 600px;
+				text-align: center;
+
+				div.rsvp-border {
+					padding: 2em 0;
+				}
+
+				form {
+					padding: 2em 0;
+
+					input[type="text"] {
+
+						@include placeholder {
+							color: $gold;
+							font-weight: 100;
+						}
+						margin: 0.5em 0;
+						padding: 1em 0.5em;
+						width: 100%;
+						font-size: 1.5em;
+
+						background-color: $black;
+						border: none;
+						border-bottom: 1px solid $gold;
+					}
+
+					input[type="submit"] {
+						margin-top: 0.5em;
+						padding: 1em 0.5em;
+						width: 100%;
+
+						background-color: $gold;
+						color: $black;
+						font-size: 1.5em;
+						font-family: Nanum;
+						font-weight: 700;
+						border-radius: 5px;
+						border: 1px solid $white;
+					}
+
+					input:focus {
+						outline: none;
+					}
+				}
 			}
-
 		}
 	}
 }
