@@ -147,10 +147,10 @@ body {
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
-      -webkit-box-pack: space-between;
-      -webkit-justify-content: space-between;
-      -ms-flex-pack: space-between;
-      justify-content: space-between;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
       -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -161,14 +161,14 @@ body {
       padding: 0 120px; }
       .container main section#couple div.couple-image-container {
         height: 100%;
-        margin-right: 100px;
+        margin: 0 4em;
         width: 400px; }
         .container main section#couple div.couple-image-container div.couple-image {
           height: 100%;
           background-size: cover;
-          background-position: top center;
+          background-position: center center;
           background-repeat: no-repeat;
-          background-image: url("../images/thecouple.png"); }
+          background-image: url("../images/thecouple3.jpg"); }
           .container main section#couple div.couple-image-container div.couple-image div.gold-mask {
             width: 100%;
             height: 100%;
@@ -185,10 +185,13 @@ body {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
+        margin: 0 4em;
         width: 400px; }
         .container main section#couple div.couple-desc div.couple-header {
           margin-top: 50px;
           text-align: right; }
+        .container main section#couple div.couple-desc div.couple-address {
+          text-align: left; }
     .container main section#event-details {
       display: -webkit-box;
       display: -moz-box;

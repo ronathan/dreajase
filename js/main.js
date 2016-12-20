@@ -2,19 +2,18 @@
 
 	// Element declaration
 	var $navbar = $('#navbar');
+	var $sectionCouple = $('section#couple');
 
 	// Creates sticky header
 	$navbar.waypoint({
 		handler: function(direction) {
 			$navbar.addClass('navbar-fixed');
-			console.log("SOMETHING HAPPENED");
 		}
 	});
 
 	$navbar.waypoint({
 		handler: function(direction) {
 			$navbar.removeClass('navbar-fixed');
-			console.log("SOMETHING ELSE HAPPENED");
 		},
 		offset: '1px'
 	});

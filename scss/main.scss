@@ -160,7 +160,7 @@ body {
 		section#couple {
 			@include flex-display;
 			@include flex-direction-row;
-			@include justify-content(space-between);
+			@include justify-content(center);
 			@include flex-wrap(wrap);
 			@include flex-align-items(center);
 			
@@ -168,15 +168,15 @@ body {
 
 			div.couple-image-container {
 				height: 100%;
-				margin-right: 100px;
+				margin: 0 4em;
 				width: 400px;
 
 				div.couple-image {
 					height: 100%;
 					background-size: cover;
-					background-position: top center;
+					background-position: center center;
 					background-repeat: no-repeat;
-					background-image: url('../images/thecouple.png');
+					background-image: url('../images/thecouple3.jpg');
 
 					div.gold-mask {
 						width:100%;
@@ -191,6 +191,7 @@ body {
 				@include flex-display;
 				@include flex-direction-column;
 				
+				margin: 0 4em;
 				width: 400px;
 
 				div.couple-desc-writeup {
@@ -200,6 +201,9 @@ body {
 				div.couple-header {
 					margin-top: 50px;
 					text-align: right;
+				}
+				div.couple-address {
+					text-align: left;
 				}
 			}
 		}
