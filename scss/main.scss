@@ -74,33 +74,38 @@ body {
 	opacity: 0;
 }
 
+#navbar {
+	@include flex-display;
+	@include flex-direction-row;
+	@include justify-content(space-between);
+
+	position: relative;
+	z-index: 10;
+	height: 60px;
+	width: 100%;
+	padding: 12px 60px;
+	background-color: $white;
+	border-bottom: 1px solid $gold;
+	border-top: 1px solid $gold;
+
+	.navbar-item {
+		position: relative;
+		margin: auto 0px;
+		width: auto;
+
+		cursor: pointer;
+		text-align: center;
+	}
+}
+.navbar-fixed {
+	position: fixed !important;
+	top: 0px;
+}
+
 .container {
 	@include flex-display;
 	@include flex-direction-row;
 	width: 100%;
-
-	.navbar {
-		@include flex-display;
-		@include flex-direction-row;
-		@include justify-content(space-between);
-
-		position: fixed;
-		z-index: 10;
-		height: 60px;
-		width: 100%;
-		padding: 12px 60px;
-		background-color: $white;
-		border-bottom: 1px solid $gold;
-
-		.navbar-item {
-			position: relative;
-			margin: auto 0px;
-			width: auto;
-
-			cursor: pointer;
-			text-align: center;
-		}
-	}
 
 	main {
 		width: 100%;
@@ -123,9 +128,9 @@ body {
 					height: 100%;
 					width: 100%;
 					background-size: cover;
-					background-position: top center;
+					background-position: bottom center;
 					background-repeat: no-repeat;
-					background-image: url('../images/wedding-lights.png');
+					background-image: url('../images/landing-image.jpg');
 
 					div.gold-mask {
 						width:100%;
@@ -138,8 +143,8 @@ body {
 
 			div.landing-page-headline {
 				position: absolute;
-				left: 48px;
-				bottom: 100px;
+				right: 4em;
+				bottom: 8em;
 				height: auto;
 				width: auto;
 
@@ -158,6 +163,7 @@ body {
 			@include justify-content(space-between);
 			@include flex-wrap(wrap);
 			@include flex-align-items(center);
+			
 			padding: 0 120px;
 
 			div.couple-image-container {
