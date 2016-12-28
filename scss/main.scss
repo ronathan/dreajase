@@ -1,15 +1,16 @@
 @import "mixins";
 
 $gold: #F3C078;
-$light-grey: #E2E2E2;
-$black: #383838;
-$off-white: #FFFCEF;
+$light-gold: #F7D6A9;
+$grey: #E3E3E3;
+$off-white: #FBFBF2;
 $white: #FFFFFF;
+$black: #030301;
 $emerald: #115A3C;
-$navy: #084369;
+$navy: #235789;
 
 * {
-	-webkit-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
@@ -42,31 +43,31 @@ h1 {
 	font-family: 'Baskerville';
 	font-style: italic;
 	font-weight: 400;
-	font-size: 6em;
+	font-size: 4em;
 	margin: 0;
 }
 h2 {
 	font-family: 'Baskerville';
-	font-size: 4em;
+	font-size: 2.5em;
 	font-weight: 400;
 	font-style: italic;
 	margin: 0;
 }
 h3 {
 	font-family: 'Baskerville';
-	font-size: 2em;
+	font-size: 1.35em;
 	font-weight: 400;
 	margin: 0;
 }
 p {
 	font-family: 'Nanum';
-	font-size: 1.35em;
+	font-size: 1em;
 	color: $black;
 	margin: 1em 0px;
 	font-weight: 100;
 }
 body {
-	font-size: 12px;
+	font-size: 14px;
 	font-family: Helvetica;
 	color: $gold;
 }
@@ -85,8 +86,8 @@ body {
 	width: 100%;
 	padding: 12px 60px;
 	background-color: $white;
-	border-bottom: 1px solid $gold;
-	border-top: 1px solid $gold;
+	border-bottom: 1px solid $light-gold;
+	border-top: 1px solid $light-gold;
 
 	.navbar-item {
 		position: relative;
@@ -122,7 +123,9 @@ body {
 				height: 100%;
 				width: 100%;
 				padding: 30px 0;
-				background-color: rgba(243, 192, 120, 0.4);
+				background-color: #FCF3E6;
+				border-top: 1px solid $off-white;
+				border-bottom: 1px solid $off-white;
 
 				div#landing-image {
 					height: 100%;
@@ -131,28 +134,33 @@ body {
 					background-position: bottom center;
 					background-repeat: no-repeat;
 					background-image: url('../images/landing-image.jpg');
+					border-top: 1px solid $light-gold;
+					border-bottom: 1px solid $light-gold;
 
 					div.gold-mask {
 						width:100%;
 				  		height:100%;
-				  		background-color:rgba(243, 192, 120, 0.4);
-				  		color: $gold;
+				  		background-color:rgba(243, 192, 120, 0.2);
 					}
 				}
 			}
 
 			div.landing-page-headline {
 				position: absolute;
-				right: 4em;
-				bottom: 8em;
+				right: 14em;
+				top: 17em;
 				height: auto;
 				width: auto;
 
 				text-align: center;
 
+				h1 {
+					font-size: 5em;
+					color: $off-white;
+				}
 				h2 {
-					font-family: 'Nanum';
-					color: $white;
+					font-size: 3em;
+					color: $light-gold;
 				}
 			}
 		}
@@ -164,12 +172,12 @@ body {
 			@include flex-wrap(wrap);
 			@include flex-align-items(center);
 			
-			padding: 0 120px;
+			background-color: $off-white;
 
 			div.couple-image-container {
 				height: 100%;
-				margin: 0 4em;
-				width: 400px;
+				margin: 0 3em;
+				width: 450px;
 
 				div.couple-image {
 					height: 100%;
@@ -191,7 +199,7 @@ body {
 				@include flex-display;
 				@include flex-direction-column;
 				
-				margin: 0 4em;
+				margin: 0 3em;
 				width: 400px;
 
 				div.couple-desc-writeup {
@@ -199,7 +207,7 @@ body {
 				}
 
 				div.couple-header {
-					margin-top: 50px;
+					margin-top: 1em;
 					text-align: right;
 				}
 				div.couple-address {
@@ -258,7 +266,7 @@ body {
 
 					p {
 						margin: 0;
-						font-size: 2em;
+						font-size: 1.35em;
 						color: $white;
 					}
 				}
@@ -270,37 +278,42 @@ body {
 				div.event-details-timeline {
 					margin: 5em auto;
 					@include flex-display;
-					@include flex-direction-row;
+					@include flex-direction-column;
 					@include flex-wrap(wrap);
 					@include justify-content(center);
 					@include flex-align-items(center);
 
 					div.event-details-timeline-section {
 						@include flex-display;
-						@include flex-direction-column;
+						@include flex-direction-row;
+						@include flex-wrap(wrap);
 						@include justify-content(center);
-						@include flex-align-items(center);
 
 						padding: 0 2em;
 						height: auto;
-						width: 400px;
+						text-align: left;
 
-						div.event-details-timeline-item {
+						div.event-details-timeline-time {
+							@include flex-display;
+							@include flex-direction-column;
+							@include justify-content(center);
+							@include flex-align-items(center);
+
 							padding: 1em 0;
+							padding-right: 4em;
+							border-right: 1px solid $gold;
+						}
+
+						div.event-details-timeline-details {
+							padding: 1em 0;
+							padding-left: 4em;
+							width: 600px;
+
 							p {
 								margin: 0;
-								margin-top: 1em;
 								color: $white;
 							}
 						}
-					}
-
-					div.event-details-timeline-section:first-child {
-						text-align: right;
-						border-right: 1px solid $gold;
-					}
-					div.event-details-timeline-section:nth-child(2) {
-						text-align: left;
 					}
 				}
 
@@ -344,7 +357,7 @@ body {
 						margin: 0.5em 0;
 						padding: 1em 0.5em;
 						width: 100%;
-						font-size: 1.5em;
+						font-size: 1em;
 
 						background-color: $black;
 						border: none;
@@ -352,13 +365,13 @@ body {
 					}
 
 					input[type="submit"] {
-						margin-top: 0.5em;
+						margin-top: 1.5em;
 						padding: 1em 0.5em;
-						width: 100%;
+						width: 300px;
 
 						background-color: $gold;
 						color: $black;
-						font-size: 1.5em;
+						font-size: 1em;
 						font-family: Nanum;
 						font-weight: 700;
 						border-radius: 5px;

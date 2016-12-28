@@ -3,6 +3,7 @@
 	// Element declaration
 	var $navbar = $('#navbar');
 	var $sectionCouple = $('section#couple');
+	var $sectionRSVP = $('section#rsvp');
 
 	// Creates sticky header
 	$navbar.waypoint({

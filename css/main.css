@@ -24,31 +24,31 @@ h1 {
   font-family: 'Baskerville';
   font-style: italic;
   font-weight: 400;
-  font-size: 6em;
+  font-size: 4em;
   margin: 0; }
 
 h2 {
   font-family: 'Baskerville';
-  font-size: 4em;
+  font-size: 2.5em;
   font-weight: 400;
   font-style: italic;
   margin: 0; }
 
 h3 {
   font-family: 'Baskerville';
-  font-size: 2em;
+  font-size: 1.35em;
   font-weight: 400;
   margin: 0; }
 
 p {
   font-family: 'Nanum';
-  font-size: 1.35em;
-  color: #383838;
+  font-size: 1em;
+  color: #030301;
   margin: 1em 0px;
   font-weight: 100; }
 
 body {
-  font-size: 12px;
+  font-size: 14px;
   font-family: Helvetica;
   color: #F3C078; }
 
@@ -76,8 +76,8 @@ body {
   width: 100%;
   padding: 12px 60px;
   background-color: #FFFFFF;
-  border-bottom: 1px solid #F3C078;
-  border-top: 1px solid #F3C078; }
+  border-bottom: 1px solid #F7D6A9;
+  border-top: 1px solid #F7D6A9; }
   #navbar .navbar-item {
     position: relative;
     margin: auto 0px;
@@ -113,29 +113,35 @@ body {
         height: 100%;
         width: 100%;
         padding: 30px 0;
-        background-color: rgba(243, 192, 120, 0.4); }
+        background-color: #FCF3E6;
+        border-top: 1px solid #FBFBF2;
+        border-bottom: 1px solid #FBFBF2; }
         .container main section#landing div.landing-gold-background div#landing-image {
           height: 100%;
           width: 100%;
           background-size: cover;
           background-position: bottom center;
           background-repeat: no-repeat;
-          background-image: url("../images/landing-image.jpg"); }
+          background-image: url("../images/landing-image.jpg");
+          border-top: 1px solid #F7D6A9;
+          border-bottom: 1px solid #F7D6A9; }
           .container main section#landing div.landing-gold-background div#landing-image div.gold-mask {
             width: 100%;
             height: 100%;
-            background-color: rgba(243, 192, 120, 0.4);
-            color: #F3C078; }
+            background-color: rgba(243, 192, 120, 0.2); }
       .container main section#landing div.landing-page-headline {
         position: absolute;
-        right: 4em;
-        bottom: 8em;
+        right: 14em;
+        top: 17em;
         height: auto;
         width: auto;
         text-align: center; }
+        .container main section#landing div.landing-page-headline h1 {
+          font-size: 5em;
+          color: #FBFBF2; }
         .container main section#landing div.landing-page-headline h2 {
-          font-family: 'Nanum';
-          color: #FFFFFF; }
+          font-size: 3em;
+          color: #F7D6A9; }
     .container main section#couple {
       display: -webkit-box;
       display: -moz-box;
@@ -158,11 +164,11 @@ body {
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center;
-      padding: 0 120px; }
+      background-color: #FBFBF2; }
       .container main section#couple div.couple-image-container {
         height: 100%;
-        margin: 0 4em;
-        width: 400px; }
+        margin: 0 3em;
+        width: 450px; }
         .container main section#couple div.couple-image-container div.couple-image {
           height: 100%;
           background-size: cover;
@@ -185,10 +191,10 @@ body {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
-        margin: 0 4em;
+        margin: 0 3em;
         width: 400px; }
         .container main section#couple div.couple-desc div.couple-header {
-          margin-top: 50px;
+          margin-top: 1em;
           text-align: right; }
         .container main section#couple div.couple-desc div.couple-address {
           text-align: left; }
@@ -239,7 +245,7 @@ body {
         margin: 2em auto; }
         .container main section#event-details div.event-details-item div.event-details-venue p {
           margin: 0;
-          font-size: 2em;
+          font-size: 1.35em;
           color: #FFFFFF; }
       .container main section#event-details div.event-details-item div.event-details-venue-logo {
         margin: 5em 0; }
@@ -250,11 +256,11 @@ body {
         display: -ms-flexbox;
         display: -webkit-flex;
         display: flex;
-        -webkit-box-orient: horizontal;
+        -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-        -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-        flex-direction: row;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
         -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -272,33 +278,50 @@ body {
           display: -ms-flexbox;
           display: -webkit-flex;
           display: flex;
-          -webkit-box-orient: vertical;
+          -webkit-box-orient: horizontal;
           -webkit-box-direction: normal;
-          -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-          flex-direction: column;
+          -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
           -webkit-box-pack: center;
           -webkit-justify-content: center;
           -ms-flex-pack: center;
           justify-content: center;
-          -webkit-box-align: center;
-          -webkit-align-items: center;
-          -ms-flex-align: center;
-          align-items: center;
           padding: 0 2em;
           height: auto;
-          width: 400px; }
-          .container main section#event-details div.event-details-item div.event-details-timeline div.event-details-timeline-section div.event-details-timeline-item {
-            padding: 1em 0; }
-            .container main section#event-details div.event-details-item div.event-details-timeline div.event-details-timeline-section div.event-details-timeline-item p {
-              margin: 0;
-              margin-top: 1em;
-              color: #FFFFFF; }
-        .container main section#event-details div.event-details-item div.event-details-timeline div.event-details-timeline-section:first-child {
-          text-align: right;
-          border-right: 1px solid #F3C078; }
-        .container main section#event-details div.event-details-item div.event-details-timeline div.event-details-timeline-section:nth-child(2) {
           text-align: left; }
+          .container main section#event-details div.event-details-item div.event-details-timeline div.event-details-timeline-section div.event-details-timeline-time {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            padding: 1em 0;
+            padding-right: 4em;
+            border-right: 1px solid #F3C078; }
+          .container main section#event-details div.event-details-item div.event-details-timeline div.event-details-timeline-section div.event-details-timeline-details {
+            padding: 1em 0;
+            padding-left: 4em;
+            width: 600px; }
+            .container main section#event-details div.event-details-item div.event-details-timeline div.event-details-timeline-section div.event-details-timeline-details p {
+              margin: 0;
+              color: #FFFFFF; }
       .container main section#event-details div.event-details-item div.event-details-logo {
         margin: 5em 0; }
     .container main section#rsvp {
@@ -322,7 +345,7 @@ body {
       align-items: center;
       padding: 3em 10em;
       height: auto;
-      background-color: #383838;
+      background-color: #030301;
       text-align: center; }
       .container main section#rsvp div.rsvp-card {
         display: -webkit-box;
@@ -345,8 +368,8 @@ body {
             margin: 0.5em 0;
             padding: 1em 0.5em;
             width: 100%;
-            font-size: 1.5em;
-            background-color: #383838;
+            font-size: 1em;
+            background-color: #030301;
             border: none;
             border-bottom: 1px solid #F3C078; }
             .container main section#rsvp div.rsvp-card form input[type="text"]::-webkit-input-placeholder {
@@ -362,12 +385,12 @@ body {
               color: #F3C078;
               font-weight: 100; }
           .container main section#rsvp div.rsvp-card form input[type="submit"] {
-            margin-top: 0.5em;
+            margin-top: 1.5em;
             padding: 1em 0.5em;
-            width: 100%;
+            width: 300px;
             background-color: #F3C078;
-            color: #383838;
-            font-size: 1.5em;
+            color: #030301;
+            font-size: 1em;
             font-family: Nanum;
             font-weight: 700;
             border-radius: 5px;
