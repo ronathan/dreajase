@@ -21,34 +21,32 @@
   font-weight: 700;
   font-style: normal; }
 h1 {
-  font-family: 'Baskerville';
-  font-style: italic;
+  font-family: 'Petit Formal Script', cursive, 'Baskerville';
   font-weight: 400;
-  font-size: 4em;
+  font-size: 3em;
   margin: 0; }
 
 h2 {
-  font-family: 'Baskerville';
-  font-size: 2.5em;
+  font-family: 'Petit Formal Script', cursive, 'Baskerville';
+  font-size: 2em;
   font-weight: 400;
-  font-style: italic;
   margin: 0; }
 
 h3 {
-  font-family: 'Baskerville';
+  font-family: 'Roboto', sans-serif, 'Open Sans';
   font-size: 1.35em;
   font-weight: 400;
   margin: 0; }
 
 p {
-  font-family: 'Nanum';
-  font-size: 1em;
+  font-family: 'Roboto', sans-serif, 'Open Sans', sans-serif;
+  font-size: 1.15em;
   color: #030301;
   margin: 1em 0px;
   font-weight: 100; }
 
 body {
-  font-size: 14px;
+  font-size: 12px;
   font-family: Helvetica;
   color: #F3C078; }
 
@@ -66,24 +64,28 @@ body {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: space-between;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: space-between;
-  justify-content: space-between;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   position: relative;
   z-index: 10;
-  height: 60px;
   width: 100%;
-  padding: 12px 60px;
+  padding: 16px 60px;
   background-color: #FFFFFF;
   border-bottom: 1px solid #F7D6A9;
   border-top: 1px solid #F7D6A9; }
   #navbar .navbar-item {
     position: relative;
-    margin: auto 0px;
+    margin: 0px auto;
     width: auto;
     cursor: pointer;
     text-align: center; }
+    #navbar .navbar-item p {
+      margin: 0;
+      font-family: 'Petit Formal Script', cursive;
+      color: #F3C078;
+      font-size: 1.25em; }
 
 .navbar-fixed {
   position: fixed !important;
@@ -137,10 +139,10 @@ body {
         width: auto;
         text-align: center; }
         .container main section#landing div.landing-page-headline h1 {
-          font-size: 5em;
+          font-size: 4em;
           color: #FBFBF2; }
-        .container main section#landing div.landing-page-headline h2 {
-          font-size: 3em;
+        .container main section#landing div.landing-page-headline p {
+          font-size: 2em;
           color: #F7D6A9; }
     .container main section#couple {
       display: -webkit-box;
@@ -193,6 +195,8 @@ body {
         flex-direction: column;
         margin: 0 3em;
         width: 400px; }
+        .container main section#couple div.couple-desc div.couple-desc-writeup p {
+          color: #757574; }
         .container main section#couple div.couple-desc div.couple-header {
           margin-top: 1em;
           text-align: right; }
@@ -248,9 +252,10 @@ body {
           font-size: 1.35em;
           color: #FFFFFF; }
       .container main section#event-details div.event-details-item div.event-details-venue-logo {
-        margin: 5em 0; }
+        margin: 4em 0; }
       .container main section#event-details div.event-details-item div.event-details-timeline {
-        margin: 5em auto;
+        margin: 4em auto;
+        margin-top: 0;
         display: -webkit-box;
         display: -moz-box;
         display: -ms-flexbox;
@@ -366,7 +371,7 @@ body {
           padding: 2em 0; }
           .container main section#rsvp div.rsvp-card form input[type="text"] {
             margin: 0.5em 0;
-            padding: 1em 0.5em;
+            padding: 0.5em;
             width: 100%;
             font-size: 1em;
             background-color: #030301;
@@ -384,7 +389,8 @@ body {
             .container main section#rsvp div.rsvp-card form input[type="text"]:-ms-input-placeholder {
               color: #F3C078;
               font-weight: 100; }
-          .container main section#rsvp div.rsvp-card form input[type="submit"] {
+          .container main section#rsvp div.rsvp-card form div#rsvp-submit-btn {
+            margin: 0 auto;
             margin-top: 1.5em;
             padding: 1em 0.5em;
             width: 300px;
@@ -394,7 +400,7 @@ body {
             font-family: Nanum;
             font-weight: 700;
             border-radius: 5px;
-            border: 1px solid #FFFFFF; }
+            border: 1px solid #F7D6A9; }
           .container main section#rsvp div.rsvp-card form input:focus {
             outline: none; }
 

@@ -40,34 +40,32 @@ $navy: #235789;
 }
 
 h1 {
-	font-family: 'Baskerville';
-	font-style: italic;
+	font-family: 'Petit Formal Script', cursive, 'Baskerville';	
 	font-weight: 400;
-	font-size: 4em;
+	font-size: 3em;
 	margin: 0;
 }
 h2 {
-	font-family: 'Baskerville';
-	font-size: 2.5em;
+	font-family: 'Petit Formal Script', cursive, 'Baskerville';
+	font-size: 2em;
 	font-weight: 400;
-	font-style: italic;
 	margin: 0;
 }
 h3 {
-	font-family: 'Baskerville';
+	font-family: 'Roboto', sans-serif, 'Open Sans';
 	font-size: 1.35em;
 	font-weight: 400;
 	margin: 0;
 }
 p {
-	font-family: 'Nanum';
-	font-size: 1em;
+	font-family: 'Roboto', sans-serif, 'Open Sans', sans-serif;
+	font-size: 1.15em;
 	color: $black;
 	margin: 1em 0px;
 	font-weight: 100;
 }
 body {
-	font-size: 14px;
+	font-size: 12px;
 	font-family: Helvetica;
 	color: $gold;
 }
@@ -78,24 +76,29 @@ body {
 #navbar {
 	@include flex-display;
 	@include flex-direction-row;
-	@include justify-content(space-between);
+	@include justify-content(center);
 
 	position: relative;
 	z-index: 10;
-	height: 60px;
 	width: 100%;
-	padding: 12px 60px;
+	padding: 16px 60px;
 	background-color: $white;
 	border-bottom: 1px solid $light-gold;
 	border-top: 1px solid $light-gold;
 
 	.navbar-item {
 		position: relative;
-		margin: auto 0px;
+		margin: 0px auto;
 		width: auto;
 
 		cursor: pointer;
 		text-align: center;
+		p {
+			margin: 0;
+			font-family: 'Petit Formal Script', cursive;
+			color: $gold;
+			font-size: 1.25em;
+		}
 	}
 }
 .navbar-fixed {
@@ -155,11 +158,11 @@ body {
 				text-align: center;
 
 				h1 {
-					font-size: 5em;
+					font-size: 4em;
 					color: $off-white;
 				}
-				h2 {
-					font-size: 3em;
+				p {
+					font-size: 2em;
 					color: $light-gold;
 				}
 			}
@@ -203,7 +206,9 @@ body {
 				width: 400px;
 
 				div.couple-desc-writeup {
-
+					p {
+						color: #757574;
+					}
 				}
 
 				div.couple-header {
@@ -272,11 +277,12 @@ body {
 				}
 
 				div.event-details-venue-logo {
-					margin: 5em 0;
+					margin: 4em 0;
 				}
 
 				div.event-details-timeline {
-					margin: 5em auto;
+					margin: 4em auto;
+					margin-top: 0;
 					@include flex-display;
 					@include flex-direction-column;
 					@include flex-wrap(wrap);
@@ -355,7 +361,7 @@ body {
 							font-weight: 100;
 						}
 						margin: 0.5em 0;
-						padding: 1em 0.5em;
+						padding: 0.5em;
 						width: 100%;
 						font-size: 1em;
 
@@ -364,7 +370,8 @@ body {
 						border-bottom: 1px solid $gold;
 					}
 
-					input[type="submit"] {
+					div#rsvp-submit-btn {
+						margin: 0 auto;
 						margin-top: 1.5em;
 						padding: 1em 0.5em;
 						width: 300px;
@@ -375,7 +382,7 @@ body {
 						font-family: Nanum;
 						font-weight: 700;
 						border-radius: 5px;
-						border: 1px solid $white;
+						border: 1px solid $light-gold;
 					}
 
 					input:focus {
