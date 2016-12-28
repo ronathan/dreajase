@@ -68,12 +68,19 @@
 }
 
 /* Animation Mixins */
-@mixin transition($val, $timeInt) {
-    -webkit-transition: color $val;
-    -moz-transition: $val $timeInt;
-    -ms-transition: $val $timeInt;
-    -o-transition: $val $timeInt;
-    transition: $val $timeInt;
+@mixin animation($keyframe, $duration, $easing, $direction) {
+    -webkit-animation: $keyframe $duration $easing $direction;
+    -moz-animation: $keyframe $duration $easing $direction;
+    -ms-animation: $keyframe $duration $easing $direction;
+    animation: $keyframe $duration $easing $direction;
+}
+
+@mixin transition($val, $timeInt, $function) {
+    -webkit-transition: $val $timeInt $function;
+    -moz-transition: $val $timeInt $function;
+    -ms-transition: $val $timeInt $function;
+    -o-transition: $val $timeInt $function;
+    transition: $val $timeInt $function;
 }
 
 @mixin animation-delay($val) {

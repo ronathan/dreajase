@@ -2,10 +2,16 @@
 
 $gold: #F3C078;
 $light-gold: #F7D6A9;
+$dark-gold: #6F5837;
+$landing-page-background: #FCF3E6;
+
 $grey: #E3E3E3;
 $off-white: #FBFBF2;
 $white: #FFFFFF;
+
+$light-black: #757574;
 $black: #030301;
+
 $emerald: #115A3C;
 $navy: #235789;
 
@@ -98,6 +104,11 @@ body {
 			font-family: 'Petit Formal Script', cursive;
 			color: $gold;
 			font-size: 1.25em;
+
+			@include transition(all, 500ms, ease);
+		}
+		p:hover {
+			color: $dark-gold;
 		}
 	}
 }
@@ -105,6 +116,20 @@ body {
 	position: fixed !important;
 	top: 0px;
 }
+
+// General Path Animations
+// svg path#wtf {
+// 	stroke: $gold;
+// 	stroke-width: 1;
+// 	stroke-dasharray: 3;
+// 	stroke-dashoffset: 3;
+// }
+// svg path#wtf.path-animate {
+//   	@include animation(draw, 1s, linear, forwards);
+// }
+// svg path#wtf.path-hide {
+// 	@include animation(erase, 400ms, linear, backwards);
+// }
 
 .container {
 	@include flex-display;
@@ -126,7 +151,7 @@ body {
 				height: 100%;
 				width: 100%;
 				padding: 30px 0;
-				background-color: #FCF3E6;
+				background-color: $landing-page-background;
 				border-top: 1px solid $off-white;
 				border-bottom: 1px solid $off-white;
 
@@ -150,8 +175,13 @@ body {
 
 			div.landing-page-headline {
 				position: absolute;
-				right: 14em;
+				
+				padding: 2em 2em;
 				top: 17em;
+				right: 12em;
+				
+				background-color: rgba(0,0,0,0.2);
+				border: 1px solid $light-gold;
 				height: auto;
 				width: auto;
 
@@ -207,7 +237,7 @@ body {
 
 				div.couple-desc-writeup {
 					p {
-						color: #757574;
+						color: $light-black;
 					}
 				}
 

@@ -85,7 +85,14 @@ body {
       margin: 0;
       font-family: 'Petit Formal Script', cursive;
       color: #F3C078;
-      font-size: 1.25em; }
+      font-size: 1.25em;
+      -webkit-transition: all 500ms ease;
+      -moz-transition: all 500ms ease;
+      -ms-transition: all 500ms ease;
+      -o-transition: all 500ms ease;
+      transition: all 500ms ease; }
+    #navbar .navbar-item p:hover {
+      color: #6F5837; }
 
 .navbar-fixed {
   position: fixed !important;
@@ -133,8 +140,11 @@ body {
             background-color: rgba(243, 192, 120, 0.2); }
       .container main section#landing div.landing-page-headline {
         position: absolute;
-        right: 14em;
+        padding: 2em 2em;
         top: 17em;
+        right: 12em;
+        background-color: rgba(0, 0, 0, 0.2);
+        border: 1px solid #F7D6A9;
         height: auto;
         width: auto;
         text-align: center; }
