@@ -2,9 +2,9 @@
 <head>
 	<link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script|Roboto:100|Open+Sans" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../css/normalize.css" media="screen"/>
-	<link rel="stylesheet" type="text/css" href="../css/main.css" media="screen"/>
 	<link rel="stylesheet" type="text/css" href="../css/icomoon.css" media="screen"/>
 	<link rel="stylesheet" type="text/css" href="../css/animate.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="../css/main.css" media="screen"/>
 </head>
 
 <body>
@@ -27,10 +27,7 @@
 		</section>
 
 		<!-- Navbar is placed after landing page for sticky effect -->
-		<div id="navbar"
-			data-anchor-target="#landing"
-			data-top="opacity:0;"
-			data-top-bottom="opacity:1;">
+		<div id="navbar">
 			<div class="navbar-item">
 				<p>The Couple</p>
 			</div>
@@ -50,7 +47,7 @@
 
 		<section id="couple">
 			
-			<div class="couple-image-container">
+			<div class="couple-image-container hidden">
 				<div class="couple-image">
 					<div class="gold-mask">
 					</div>
@@ -59,11 +56,11 @@
 
 			<div class="couple-desc">
 
-				<div class="couple-address">
+				<div class="couple-address hidden">
 					<h2>To our family and friends,</h2>
 				</div>
 				
-				<div class="couple-desc-writeup">
+				<div class="couple-desc-writeup hidden">
 					<p>
 						Chocolate icing pastry toffee caramels jujubes. Bonbon apple pie powder pastry soufflé tart danish brownie. Jelly-o pudding croissant. Gingerbread chocolate toffee dragée biscuit. Cupcake cotton candy pie brownie fruitcake croissant carrot cake marshmallow. Caramels toffee bear claw dragée. 
 					</p>
@@ -72,13 +69,13 @@
 						Marshmallow pie fruitcake powder jelly-o gingerbread gummies marshmallow. Pastry gummi bears danish danish muffin pie. Brownie tiramisu icing. Tiramisu sweet roll powder lollipop dessert caramels apple pie.
 					</p>
 				</div>
-				<div class="couple-header">
+				<div class="couple-header hidden">
 					<h1>A Message From<br/>Jason & Andrea</h1>
 				</div>
 			</div>
 		</section>
 
-		<section id="event-details">
+		<section id="event-details" class="hindu">
 			<div class="event-details-header">
 				<h1>Event Details</h1>
 				<svg width="300px" height="17px" viewBox="0 0 300 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -92,17 +89,19 @@
 			
 			<div class="event-details-menu">
 
-				<div class="event-details-menu-item selected">
+				<div class="event-details-menu-item selected"
+					data-eventdetails="hindu">
 					<h3>Friday June 2, 2017</h3>
 				</div>
 
-				<div class="event-details-menu-item">
+				<div class="event-details-menu-item"
+					data-eventdetails="christian">
 					<h3>Saturday June 3, 2017</h3>
 				</div>
 
 			</div>
 
-			<div id="event-details-item-hindu" class="event-details-item">
+			<div id="event-details-item-hindu" class="event-details-item hindu">
 			
 				<div id="event-details-venue-hindu" class="event-details-venue">
 					<p>Hindu Ceremony will be held at</p>
@@ -342,7 +341,7 @@
 				</div>
 			</div>
 
-			<div id="event-details-item-christian" class="event-details-item">
+			<div id="event-details-item-christian" class="event-details-item christian">
 				<div class="event-details-venue">
 					<p>Christian Ceremony will be held at</p>
 					<h2>The Greenhouse at the Royal Ambassador</h2>
@@ -391,14 +390,12 @@
 				<div class="event-details-timeline">
 					
 					<div class="event-details-timeline-section">
-						<div class="event-details-timeline-item">
+						
+						<div class="event-details-timeline-time">
 							<h3>4:30PM - Headline 1</h3>
-							<p>
-								Marshmallow pie fruitcake powder jelly-o gingerbread gummies marshmallow. Pastry gummi bears danish danish muffin pie. Brownie tiramisu icing. Tiramisu sweet roll powder lollipop dessert caramels apple pie.
-							</p>
 						</div>
-						<div class="event-details-timeline-item">
-							<h3>6:30PM - Headline 2</h3>
+
+						<div class="event-details-timeline-details">
 							<p>
 								Marshmallow pie fruitcake powder jelly-o gingerbread gummies marshmallow. Pastry gummi bears danish danish muffin pie. Brownie tiramisu icing. Tiramisu sweet roll powder lollipop dessert caramels apple pie.
 							</p>
@@ -406,21 +403,44 @@
 					</div>
 
 					<div class="event-details-timeline-section">
-						<div class="event-details-timeline-item">
-							<h3>8:30PM - Headline 3</h3>
+						
+						<div class="event-details-timeline-time">
+							<h3>4:30PM - Headline 1</h3>
+						</div>
+
+						<div class="event-details-timeline-details">
 							<p>
 								Marshmallow pie fruitcake powder jelly-o gingerbread gummies marshmallow. Pastry gummi bears danish danish muffin pie. Brownie tiramisu icing. Tiramisu sweet roll powder lollipop dessert caramels apple pie.
 							</p>
 						</div>
-						<div class="event-details-timeline-item">
-							<h3>9:30PM - Headline 4</h3>
+					</div>
+
+					<div class="event-details-timeline-section">
+						
+						<div class="event-details-timeline-time">
+							<h3>4:30PM - Headline 1</h3>
+						</div>
+
+						<div class="event-details-timeline-details">
+							<p>
+								Marshmallow pie fruitcake powder jelly-o gingerbread gummies marshmallow. Pastry gummi bears danish danish muffin pie. Brownie tiramisu icing. Tiramisu sweet roll powder lollipop dessert caramels apple pie.
+							</p>
+						</div>
+					</div>
+
+					<div class="event-details-timeline-section">
+						
+						<div class="event-details-timeline-time">
+							<h3>4:30PM - Headline 1</h3>
+						</div>
+
+						<div class="event-details-timeline-details">
 							<p>
 								Marshmallow pie fruitcake powder jelly-o gingerbread gummies marshmallow. Pastry gummi bears danish danish muffin pie. Brownie tiramisu icing. Tiramisu sweet roll powder lollipop dessert caramels apple pie.
 							</p>
 						</div>
 					</div>
 				</div>
-
 				<div class="event-details-logo">
 					<svg width="30px" height="44px" viewBox="0 0 30 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 					    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

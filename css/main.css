@@ -70,6 +70,7 @@ body {
   justify-content: center;
   position: relative;
   z-index: 10;
+  height: 50px;
   width: 100%;
   padding: 16px 60px;
   background-color: #FFFFFF;
@@ -115,7 +116,11 @@ body {
     .container main section {
       position: relative;
       height: 100%;
-      width: 100%; }
+      width: 100%;
+      border-top: 1px solid #F7D6A9;
+      border-bottom: 1px solid #F7D6A9; }
+    .container main section.extra-margin {
+      margin-top: 50px; }
     .container main section#landing {
       padding: 30px 0; }
       .container main section#landing div.landing-gold-background {
@@ -123,8 +128,8 @@ body {
         width: 100%;
         padding: 30px 0;
         background-color: #FCF3E6;
-        border-top: 1px solid #FBFBF2;
-        border-bottom: 1px solid #FBFBF2; }
+        border-top: 1px solid #FBFBF4;
+        border-bottom: 1px solid #FBFBF4; }
         .container main section#landing div.landing-gold-background div#landing-image {
           height: 100%;
           width: 100%;
@@ -150,7 +155,7 @@ body {
         text-align: center; }
         .container main section#landing div.landing-page-headline h1 {
           font-size: 4em;
-          color: #FBFBF2; }
+          color: #FBFBF4; }
         .container main section#landing div.landing-page-headline p {
           font-size: 2em;
           color: #F7D6A9; }
@@ -176,11 +181,13 @@ body {
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center;
-      background-color: #FBFBF2; }
+      background-color: #1E152A; }
       .container main section#couple div.couple-image-container {
         height: 100%;
         margin: 0 3em;
-        width: 450px; }
+        width: 450px;
+        border-left: 1px solid #F3C078;
+        border-right: 1px solid #F3C078; }
         .container main section#couple div.couple-image-container div.couple-image {
           height: 100%;
           background-size: cover;
@@ -205,13 +212,29 @@ body {
         flex-direction: column;
         margin: 0 3em;
         width: 400px; }
-        .container main section#couple div.couple-desc div.couple-desc-writeup p {
-          color: #757574; }
         .container main section#couple div.couple-desc div.couple-header {
+          -webkit-animation-delay: 800ms;
+          -moz-animation-delay: 800ms;
+          -ms-animation-delay: 800ms;
+          -o-animation-delay: 800ms;
+          animation-delay: 800ms;
           margin-top: 1em;
           text-align: right; }
         .container main section#couple div.couple-desc div.couple-address {
+          -webkit-animation-delay: 1.2s;
+          -moz-animation-delay: 1.2s;
+          -ms-animation-delay: 1.2s;
+          -o-animation-delay: 1.2s;
+          animation-delay: 1.2s;
           text-align: left; }
+        .container main section#couple div.couple-desc div.couple-desc-writeup {
+          -webkit-animation-delay: 1.2s;
+          -moz-animation-delay: 1.2s;
+          -ms-animation-delay: 1.2s;
+          -o-animation-delay: 1.2s;
+          animation-delay: 1.2s; }
+          .container main section#couple div.couple-desc div.couple-desc-writeup p {
+            color: #FBFBF4; }
     .container main section#event-details {
       display: -webkit-box;
       display: -moz-box;
@@ -223,9 +246,13 @@ body {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-transition: all 500ms ease;
+      -moz-transition: all 500ms ease;
+      -ms-transition: all 500ms ease;
+      -o-transition: all 500ms ease;
+      transition: all 500ms ease;
       padding: 3em 10em;
       height: auto;
-      background-color: #115A3C;
       text-align: center; }
       .container main section#event-details div.event-details-header {
         margin: 2em auto; }
@@ -247,8 +274,6 @@ body {
         .container main section#event-details div.event-details-menu div.event-details-menu-item {
           padding: 12px 24px;
           cursor: pointer; }
-          .container main section#event-details div.event-details-menu div.event-details-menu-item h3 {
-            color: #FFFFFF; }
         .container main section#event-details div.event-details-menu div.event-details-menu-item.selected {
           border-bottom: 1px solid #F3C078; }
           .container main section#event-details div.event-details-menu div.event-details-menu-item.selected h3 {
@@ -259,8 +284,7 @@ body {
         margin: 2em auto; }
         .container main section#event-details div.event-details-item div.event-details-venue p {
           margin: 0;
-          font-size: 1.35em;
-          color: #FFFFFF; }
+          font-size: 1.35em; }
       .container main section#event-details div.event-details-item div.event-details-venue-logo {
         margin: 4em 0; }
       .container main section#event-details div.event-details-item div.event-details-timeline {
@@ -335,10 +359,17 @@ body {
             padding-left: 4em;
             width: 600px; }
             .container main section#event-details div.event-details-item div.event-details-timeline div.event-details-timeline-section div.event-details-timeline-details p {
-              margin: 0;
-              color: #FFFFFF; }
+              margin: 0; }
       .container main section#event-details div.event-details-item div.event-details-logo {
         margin: 5em 0; }
+    .container main section#event-details.hindu {
+      background-color: #115A3C; }
+      .container main section#event-details.hindu p, .container main section#event-details.hindu h3 {
+        color: #FFFFFF; }
+    .container main section#event-details.christian {
+      background-color: #FBFBF4; }
+      .container main section#event-details.christian p, .container main section#event-details.christian h3 {
+        color: #030301; }
     .container main section#rsvp {
       display: -webkit-box;
       display: -moz-box;

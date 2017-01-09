@@ -6,12 +6,14 @@ $dark-gold: #6F5837;
 $landing-page-background: #FCF3E6;
 
 $grey: #E3E3E3;
-$off-white: #FBFBF2;
+$dark-grey: #545F66;
+$off-white: #FBFBF4;
 $white: #FFFFFF;
 
 $light-black: #757574;
 $black: #030301;
 
+$purple: #1E152A;
 $emerald: #115A3C;
 $navy: #235789;
 
@@ -86,6 +88,7 @@ body {
 
 	position: relative;
 	z-index: 10;
+	height: 50px;
 	width: 100%;
 	padding: 16px 60px;
 	background-color: $white;
@@ -143,6 +146,11 @@ body {
 			position: relative;
 			height: 100%;
 			width: 100%;
+			border-top: 1px solid $light-gold;
+			border-bottom: 1px solid $light-gold;
+		}
+		section.extra-margin {
+			margin-top: 50px;	
 		}
 		section#landing {
 			padding: 30px 0;
@@ -205,12 +213,14 @@ body {
 			@include flex-wrap(wrap);
 			@include flex-align-items(center);
 			
-			background-color: $off-white;
+			background-color: $purple;
 
 			div.couple-image-container {
 				height: 100%;
 				margin: 0 3em;
 				width: 450px;
+				border-left: 1px solid $gold;
+				border-right: 1px solid $gold;
 
 				div.couple-image {
 					height: 100%;
@@ -231,22 +241,27 @@ body {
 			div.couple-desc {
 				@include flex-display;
 				@include flex-direction-column;
-				
+
 				margin: 0 3em;
 				width: 400px;
 
-				div.couple-desc-writeup {
-					p {
-						color: $light-black;
-					}
-				}
 
 				div.couple-header {
+					@include animation-delay(800ms);
+					
 					margin-top: 1em;
 					text-align: right;
 				}
 				div.couple-address {
+					@include animation-delay(1.2s);
+
 					text-align: left;
+				}
+				div.couple-desc-writeup {
+					@include animation-delay(1.2s);
+					p {
+						color: $off-white;
+					}
 				}
 			}
 		}
@@ -254,10 +269,10 @@ body {
 		section#event-details {
 			@include flex-display;
 			@include flex-direction-column;
+			@include transition(all, 500ms, ease);
 
 			padding: 3em 10em;
 			height: auto;
-			background-color: $emerald;
 			text-align: center;
 
 			div.event-details-header {
@@ -277,9 +292,6 @@ body {
 				div.event-details-menu-item {
 					padding: 12px 24px;
 					cursor: pointer;
-					h3 {
-						color: $white;
-					}
 				}
 				div.event-details-menu-item.selected {
 					border-bottom: 1px solid $gold;
@@ -302,7 +314,6 @@ body {
 					p {
 						margin: 0;
 						font-size: 1.35em;
-						color: $white;
 					}
 				}
 
@@ -347,7 +358,6 @@ body {
 
 							p {
 								margin: 0;
-								color: $white;
 							}
 						}
 					}
@@ -356,6 +366,19 @@ body {
 				div.event-details-logo {
 					margin: 5em 0;
 				}
+			}
+		}
+		section#event-details.hindu {
+			background-color: $emerald;
+			
+			p, h3 {
+				color: $white;
+			}			
+		}
+		section#event-details.christian {
+			background-color: $off-white;
+			p, h3 {
+				color: $black;
 			}
 		}
 

@@ -13,6 +13,7 @@ $(function() {
 	// Tracking for SVG animations
 	var hasDrawnAnimationsForEventDetails = false;
 
+	// Scroll Tracking
 	var s = skrollr.init({ 
 		forceHeight: false,
 		easing: {
@@ -28,10 +29,19 @@ $(function() {
 		},
 		render: function(data) {	
 
-			if(data.curTop >= sectionCoupleOffset) {
+			if(data.curTop >= (sectionCoupleOffset - 60)) {
 				$navbar.addClass('navbar-fixed');
+				$sectionCouple.addClass('extra-margin');
 			} else {
 				$navbar.removeClass('navbar-fixed');
+				$sectionCouple.removeClass('extra-margin');
+			}
+
+			if(data.curTop >= (sectionCoupleOffset - 400)) {
+				$('.couple-image-container').addClass('animated fadeIn');
+				$('.couple-address').addClass('animated fadeInRight');
+				$('.couple-desc-writeup').addClass('animated fadeInRight');
+				$('.couple-header').addClass('animated fadeInRight');
 			}
 
 			// if(!hasDrawnAnimationsForEventDetails && data.curTop >= sectionEventDetailsOffset) {
@@ -50,5 +60,25 @@ $(function() {
 			// 	console.log("what2");
 			// }
 		}
+	});
+
+	// Click Handlers
+	$('.event-details-menu-item').click(function(e) {
+		
+		// Navbar Selection
+		$('.event-details-menu-item').removeClass('selected');
+		$(this).addClass('selected');
+
+		// Data Attribute on Menu Item
+		var eventDetails = $(this).attr("data-eventdetails");
+
+		// Hide / show event details
+		$('.event-details-item').hide();
+		$('#event-details-item-' + eventDetails).addClass('animated fadeIn');
+		$('#event-details-item-' + eventDetails).show();
+
+		// Change background color
+		$('section#event-details').removeClass();
+		$('section#event-details').addClass(eventDetails);
 	});
 });
