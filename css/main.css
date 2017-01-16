@@ -5,42 +5,27 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-@font-face {
-  font-family: 'Nanum';
-  src: url("../fonts/NanumMyeongjo-Regular.eot"), url("../fonts/NanumMyeongjo-Regular.ttf") format("truetype"), url("../fonts/NanumMyeongjo-Regular.svg") format("svg");
-  font-weight: 400;
-  font-style: normal; }
-@font-face {
-  font-family: 'Nanum';
-  src: url("../fonts/NanumMyeongjo-Bold.eot"), url("../fonts/NanumMyeongjo-Bold.ttf") format("truetype"), url("../fonts/NanumMyeongjo-Bold.svg") format("svg");
-  font-weight: 600;
-  font-style: normal; }
-@font-face {
-  font-family: 'Nanum';
-  src: url("../fonts/NanumMyeongjo-ExtraBold.eot"), url("../fonts/NanumMyeongjo-ExtraBold.ttf") format("truetype"), url("../fonts/NanumMyeongjo-ExtraBold.svg") format("svg");
-  font-weight: 700;
-  font-style: normal; }
 h1 {
-  font-family: 'Petit Formal Script', cursive, 'Baskerville';
-  font-weight: 400;
-  font-size: 3em;
+  font-family: 'Merriweather', serif, 'Baskerville';
+  font-weight: 300;
+  font-size: 2em;
   margin: 0; }
 
 h2 {
-  font-family: 'Petit Formal Script', cursive, 'Baskerville';
-  font-size: 2em;
-  font-weight: 400;
+  font-family: 'Merriweather', serif, 'Baskerville';
+  font-size: 1.35em;
+  font-weight: 300;
   margin: 0; }
 
 h3 {
-  font-family: 'Roboto', sans-serif, 'Open Sans';
-  font-size: 1.35em;
-  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.15em;
+  font-weight: 300;
   margin: 0; }
 
 p {
-  font-family: 'Roboto', sans-serif, 'Open Sans', sans-serif;
-  font-size: 1.15em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.85em;
   color: #030301;
   margin: 1em 0px;
   font-weight: 100; }
@@ -70,23 +55,22 @@ body {
   justify-content: center;
   position: relative;
   z-index: 10;
-  height: 50px;
+  height: 36px;
   width: 100%;
-  padding: 16px 60px;
+  padding: 12px 60px;
   background-color: #FFFFFF;
-  border-bottom: 1px solid #F7D6A9;
-  border-top: 1px solid #F7D6A9; }
+  border-bottom: 1px solid #F3C078; }
   #navbar .navbar-item {
     position: relative;
-    margin: 0px auto;
+    margin: 0 4em;
     width: auto;
     cursor: pointer;
     text-align: center; }
     #navbar .navbar-item p {
       margin: 0;
-      font-family: 'Petit Formal Script', cursive;
+      font-family: 'Merriweather', serif;
       color: #F3C078;
-      font-size: 1.25em;
+      font-weight: 300;
       -webkit-transition: all 500ms ease;
       -moz-transition: all 500ms ease;
       -ms-transition: all 500ms ease;
@@ -115,6 +99,7 @@ body {
     width: 100%; }
     .container main section {
       position: relative;
+      padding: 3em 10em;
       height: 100%;
       width: 100%;
       border-top: 1px solid #F7D6A9;
@@ -146,18 +131,17 @@ body {
       .container main section#landing div.landing-page-headline {
         position: absolute;
         padding: 2em 2em;
-        top: 17em;
+        top: 18em;
         right: 12em;
         background-color: rgba(0, 0, 0, 0.2);
         border: 1px solid #F7D6A9;
         height: auto;
-        width: auto;
+        width: 200px;
         text-align: center; }
         .container main section#landing div.landing-page-headline h1 {
-          font-size: 4em;
           color: #FBFBF4; }
         .container main section#landing div.landing-page-headline p {
-          font-size: 2em;
+          font-size: 1.35em;
           color: #F7D6A9; }
     .container main section#couple {
       display: -webkit-box;
@@ -181,6 +165,7 @@ body {
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center;
+      padding: 0;
       background-color: #1E152A; }
       .container main section#couple div.couple-image-container {
         height: 100%;
@@ -211,6 +196,7 @@ body {
         -ms-flex-direction: column;
         flex-direction: column;
         margin: 0 3em;
+        margin-top: -4em;
         width: 400px; }
         .container main section#couple div.couple-desc div.couple-header {
           -webkit-animation-delay: 800ms;
@@ -218,23 +204,32 @@ body {
           -ms-animation-delay: 800ms;
           -o-animation-delay: 800ms;
           animation-delay: 800ms;
-          margin-top: 1em;
-          text-align: right; }
+          margin-bottom: 4em;
+          text-align: left; }
         .container main section#couple div.couple-desc div.couple-address {
-          -webkit-animation-delay: 1.2s;
-          -moz-animation-delay: 1.2s;
-          -ms-animation-delay: 1.2s;
-          -o-animation-delay: 1.2s;
-          animation-delay: 1.2s;
+          -webkit-animation-delay: 1.6s;
+          -moz-animation-delay: 1.6s;
+          -ms-animation-delay: 1.6s;
+          -o-animation-delay: 1.6s;
+          animation-delay: 1.6s;
           text-align: left; }
         .container main section#couple div.couple-desc div.couple-desc-writeup {
-          -webkit-animation-delay: 1.2s;
-          -moz-animation-delay: 1.2s;
-          -ms-animation-delay: 1.2s;
-          -o-animation-delay: 1.2s;
-          animation-delay: 1.2s; }
+          -webkit-animation-delay: 1.6s;
+          -moz-animation-delay: 1.6s;
+          -ms-animation-delay: 1.6s;
+          -o-animation-delay: 1.6s;
+          animation-delay: 1.6s; }
           .container main section#couple div.couple-desc div.couple-desc-writeup p {
-            color: #FBFBF4; }
+            color: #FBFBF4;
+            margin: 1em 0; }
+        .container main section#couple div.couple-desc div.couple-signature {
+          -webkit-animation-delay: 2.4s;
+          -moz-animation-delay: 2.4s;
+          -ms-animation-delay: 2.4s;
+          -o-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+          margin-top: 4em;
+          text-align: right; }
     .container main section#event-details {
       display: -webkit-box;
       display: -moz-box;
@@ -251,13 +246,12 @@ body {
       -ms-transition: all 500ms ease;
       -o-transition: all 500ms ease;
       transition: all 500ms ease;
-      padding: 3em 10em;
       height: auto;
       text-align: center; }
       .container main section#event-details div.event-details-header {
         margin: 2em auto; }
-        .container main section#event-details div.event-details-header svg {
-          margin-top: 0.5em; }
+        .container main section#event-details div.event-details-header img {
+          margin-top: -0.5em; }
       .container main section#event-details div.event-details-menu {
         margin: 2em auto;
         display: -webkit-box;
@@ -274,6 +268,14 @@ body {
         .container main section#event-details div.event-details-menu div.event-details-menu-item {
           padding: 12px 24px;
           cursor: pointer; }
+          .container main section#event-details div.event-details-menu div.event-details-menu-item h3 {
+            -webkit-transition: all 500ms ease;
+            -moz-transition: all 500ms ease;
+            -ms-transition: all 500ms ease;
+            -o-transition: all 500ms ease;
+            transition: all 500ms ease; }
+          .container main section#event-details div.event-details-menu div.event-details-menu-item h3:hover {
+            color: #F3C078; }
         .container main section#event-details div.event-details-menu div.event-details-menu-item.selected {
           border-bottom: 1px solid #F3C078; }
           .container main section#event-details div.event-details-menu div.event-details-menu-item.selected h3 {
@@ -282,9 +284,8 @@ body {
         display: none; }
       .container main section#event-details div.event-details-item div.event-details-venue {
         margin: 2em auto; }
-        .container main section#event-details div.event-details-item div.event-details-venue p {
-          margin: 0;
-          font-size: 1.35em; }
+        .container main section#event-details div.event-details-item div.event-details-venue h3 {
+          margin: 0; }
       .container main section#event-details div.event-details-item div.event-details-venue-logo {
         margin: 4em 0; }
       .container main section#event-details div.event-details-item div.event-details-timeline {
@@ -363,13 +364,18 @@ body {
       .container main section#event-details div.event-details-item div.event-details-logo {
         margin: 5em 0; }
     .container main section#event-details.hindu {
-      background-color: #115A3C; }
+      background-color: #12424E; }
       .container main section#event-details.hindu p, .container main section#event-details.hindu h3 {
         color: #FFFFFF; }
     .container main section#event-details.christian {
       background-color: #FBFBF4; }
       .container main section#event-details.christian p, .container main section#event-details.christian h3 {
         color: #030301; }
+    .container main section#accommodations div.accommodations-header {
+      text-align: center;
+      margin: 2em auto; }
+      .container main section#accommodations div.accommodations-header img {
+        margin-top: -0.5em; }
     .container main section#rsvp {
       display: -webkit-box;
       display: -moz-box;
@@ -389,9 +395,8 @@ body {
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center;
-      padding: 3em 10em;
-      height: auto;
-      background-color: #030301;
+      height: 100%;
+      background-color: #FFFFFF;
       text-align: center; }
       .container main section#rsvp div.rsvp-card {
         display: -webkit-box;
@@ -438,7 +443,6 @@ body {
             background-color: #F3C078;
             color: #030301;
             font-size: 1em;
-            font-family: Nanum;
             font-weight: 700;
             border-radius: 5px;
             border: 1px solid #F7D6A9; }
