@@ -311,8 +311,7 @@ body {
 				}
 
 				div.event-details-timeline {
-					margin: 4em auto;
-					margin-top: 0;
+					margin: 2em auto;
 					@include flex-display;
 					@include flex-direction-column;
 					@include flex-wrap(wrap);
@@ -324,6 +323,7 @@ body {
 						@include flex-direction-row;
 						@include flex-wrap(wrap);
 						@include justify-content(center);
+						opacity: 0;
 
 						padding: 0 2em;
 						height: auto;
@@ -350,6 +350,14 @@ body {
 							}
 						}
 					}
+
+					div.event-details-timeline-section:nth-child(0) { @include animation-delay(200ms); }
+					div.event-details-timeline-section:nth-child(1) { @include animation-delay(600ms); }
+					div.event-details-timeline-section:nth-child(2) { @include animation-delay(1000ms); }
+					div.event-details-timeline-section:nth-child(3) { @include animation-delay(1400ms); }
+					div.event-details-timeline-section:nth-child(4) { @include animation-delay(1800ms); }
+					div.event-details-timeline-section:nth-child(5) { @include animation-delay(2200ms); }
+					div.event-details-timeline-section:nth-child(6) { @include animation-delay(2600ms); }
 				}
 
 				div.event-details-logo {

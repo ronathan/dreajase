@@ -11,6 +11,7 @@ $(function() {
 	var sectionRSVPOffset = $sectionRSVP.offset().top;
 
 	// Tracking for SVG animations
+	var hasDrawnAnimationsForCouple = false;
 	var hasDrawnAnimationsForEventDetails = false;
 
 	// Scroll Tracking
@@ -37,32 +38,37 @@ $(function() {
 				$sectionCouple.removeClass('extra-margin');
 			}
 
-			if(data.curTop >= (sectionCoupleOffset - 400)) {
-				$('.couple-image-container').addClass('animated fadeIn');
-				$('.couple-header').addClass('animated fadeInRight');
-				$('.couple-address').addClass('animated fadeInRight');
-				$('.couple-desc-writeup').addClass('animated fadeInRight');
-				$('.couple-signature').addClass('animated fadeIn');
+			if(data.curTop >= (sectionCoupleOffset - 400) && !hasDrawnAnimationsForCouple) {
+				
+				hasDrawnAnimationsForCouple = true;
+				$('div.couple-image-container').addClass('animated fadeIn');
+				$('div.couple-header').addClass('animated fadeInRight');
+				$('div.couple-address').addClass('animated fadeInRight');
+				$('div.couple-desc-writeup').addClass('animated fadeInRight');
+				$('div.couple-signature').addClass('animated fadeIn');
 			}
 
-			// if(!hasDrawnAnimationsForEventDetails && data.curTop >= sectionEventDetailsOffset) {
-				
-			// 	var $path = $sectionEventDetails.find('path#wtf');
-			// 	$path.attr("class", "path-animate");
 
-			// 	hasDrawnAnimationsForEventDetails = true;
-			// 	console.log("what");
-			// } else if(hasDrawnAnimationsForEventDetails && data.curTop < sectionEventDetailsOffset) {
-				
-			// 	var $path = $sectionEventDetails.find('path#wtf');
-			// 	$path.attr("class", "path-hide");
 
-			// 	hasDrawnAnimationsForEventDetails = false;
-			// 	console.log("what2");
-			// }
+			if(data.curTop >= (sectionEventDetailsOffset - 400) && !hasDrawnAnimationsForEventDetails) {
+
+				hasDrawnAnimationsForEventDetails = true;
+				$('div.event-details-header').addClass('animated fadeIn');
+				$('div.event-details-menu').addClass('animated fadeIn');
+				$('div.event-details-venue').addClass('animated fadeInUp');
+				$('div.event-details-timeline-section').addClass('animated fadeInUp');
+			}
 		}
 	});
 
+	function showTimelineSection(i, $timelineSections) {
+
+		setTimeout(function() {
+			var $timelineSection = $($timelineSections[i]);	
+			$timelineSection.addClass('animated fadeInUp');
+			if(i++ < $timelineSections.length) showTimelineSection(i, $timelineSections);
+		}, 400);
+	}
 	// Click Handlers
 
 	$('.navbar-item').click(function(e) {

@@ -289,8 +289,7 @@ body {
       .container main section#event-details div.event-details-item div.event-details-venue-logo {
         margin: 4em 0; }
       .container main section#event-details div.event-details-item div.event-details-timeline {
-        margin: 4em auto;
-        margin-top: 0;
+        margin: 2em auto;
         display: -webkit-box;
         display: -moz-box;
         display: -ms-flexbox;
@@ -330,6 +329,7 @@ body {
           -webkit-justify-content: center;
           -ms-flex-pack: center;
           justify-content: center;
+          opacity: 0;
           padding: 0 2em;
           height: auto;
           text-align: left; }
@@ -361,6 +361,48 @@ body {
             width: 600px; }
             .container main section#event-details div.event-details-item div.event-details-timeline div.event-details-timeline-section div.event-details-timeline-details p {
               margin: 0; }
+        .container main section#event-details div.event-details-item div.event-details-timeline div.event-details-timeline-section:nth-child(0) {
+          -webkit-animation-delay: 200ms;
+          -moz-animation-delay: 200ms;
+          -ms-animation-delay: 200ms;
+          -o-animation-delay: 200ms;
+          animation-delay: 200ms; }
+        .container main section#event-details div.event-details-item div.event-details-timeline div.event-details-timeline-section:nth-child(1) {
+          -webkit-animation-delay: 600ms;
+          -moz-animation-delay: 600ms;
+          -ms-animation-delay: 600ms;
+          -o-animation-delay: 600ms;
+          animation-delay: 600ms; }
+        .container main section#event-details div.event-details-item div.event-details-timeline div.event-details-timeline-section:nth-child(2) {
+          -webkit-animation-delay: 1000ms;
+          -moz-animation-delay: 1000ms;
+          -ms-animation-delay: 1000ms;
+          -o-animation-delay: 1000ms;
+          animation-delay: 1000ms; }
+        .container main section#event-details div.event-details-item div.event-details-timeline div.event-details-timeline-section:nth-child(3) {
+          -webkit-animation-delay: 1400ms;
+          -moz-animation-delay: 1400ms;
+          -ms-animation-delay: 1400ms;
+          -o-animation-delay: 1400ms;
+          animation-delay: 1400ms; }
+        .container main section#event-details div.event-details-item div.event-details-timeline div.event-details-timeline-section:nth-child(4) {
+          -webkit-animation-delay: 1800ms;
+          -moz-animation-delay: 1800ms;
+          -ms-animation-delay: 1800ms;
+          -o-animation-delay: 1800ms;
+          animation-delay: 1800ms; }
+        .container main section#event-details div.event-details-item div.event-details-timeline div.event-details-timeline-section:nth-child(5) {
+          -webkit-animation-delay: 2200ms;
+          -moz-animation-delay: 2200ms;
+          -ms-animation-delay: 2200ms;
+          -o-animation-delay: 2200ms;
+          animation-delay: 2200ms; }
+        .container main section#event-details div.event-details-item div.event-details-timeline div.event-details-timeline-section:nth-child(6) {
+          -webkit-animation-delay: 2600ms;
+          -moz-animation-delay: 2600ms;
+          -ms-animation-delay: 2600ms;
+          -o-animation-delay: 2600ms;
+          animation-delay: 2600ms; }
       .container main section#event-details div.event-details-item div.event-details-logo {
         margin: 5em 0; }
     .container main section#event-details.hindu {
