@@ -380,14 +380,48 @@ body {
 		}
 
 		section#accommodations {
+			@include flex-display;
+			@include flex-direction-column;
+
+			height: auto;
+
+			background-color: $white;
 
 			div.accommodations-header {
 
 				text-align: center;
-				margin: 2em auto;
+				margin-top: 2em;
+				margin-top: 4em;
 				
 				img {
 					margin-top: -0.5em;
+				}
+			}
+
+			div.accommodations-container {
+				@include flex-display;
+				@include flex-direction-row;
+				@include justify-content(center);
+
+				margin: 2em 0;
+
+				div#accommodations-map-canvas {
+					height: 300px;
+					width: 400px;
+					margin: 0 2em;
+					border: 1px solid #000000; 
+				}
+				div.accommodations-POI {
+					height: auto;
+					width: 400px;
+					margin: 0 2em;
+					padding: 1em;
+					text-align: center;
+					border: 1px solid #000000; 
+
+					h3 {
+						text-align: left;
+					}
 				}
 			}
 		}

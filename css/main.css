@@ -413,11 +413,55 @@ body {
       background-color: #FBFBF4; }
       .container main section#event-details.christian p, .container main section#event-details.christian h3 {
         color: #030301; }
-    .container main section#accommodations div.accommodations-header {
-      text-align: center;
-      margin: 2em auto; }
-      .container main section#accommodations div.accommodations-header img {
-        margin-top: -0.5em; }
+    .container main section#accommodations {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      height: auto;
+      background-color: #FFFFFF; }
+      .container main section#accommodations div.accommodations-header {
+        text-align: center;
+        margin-top: 2em;
+        margin-top: 4em; }
+        .container main section#accommodations div.accommodations-header img {
+          margin-top: -0.5em; }
+      .container main section#accommodations div.accommodations-container {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin: 2em 0; }
+        .container main section#accommodations div.accommodations-container div#accommodations-map-canvas {
+          height: 300px;
+          width: 400px;
+          margin: 0 2em;
+          border: 1px solid #000000; }
+        .container main section#accommodations div.accommodations-container div.accommodations-POI {
+          height: auto;
+          width: 400px;
+          margin: 0 2em;
+          padding: 1em;
+          text-align: center;
+          border: 1px solid #000000; }
+          .container main section#accommodations div.accommodations-container div.accommodations-POI h3 {
+            text-align: left; }
     .container main section#rsvp {
       display: -webkit-box;
       display: -moz-box;

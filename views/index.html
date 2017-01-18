@@ -98,7 +98,7 @@
 			<div id="event-details-item-hindu" class="event-details-item hindu">
 			
 				<div id="event-details-venue-hindu" class="event-details-venue hidden">
-					<h3>The Hindu Wedding Ceremony will be held at</h3>
+					<h3>The Hindu Wedding Ceremony, cocktail hour and reception will be held at</h3>
 					<h1>Millenium Gardens Banquet Centre</h1>
 					<h3>
 						20 Polonia Ave, #100<br/>
@@ -192,7 +192,7 @@
 
 			<div id="event-details-item-christian" class="event-details-item christian">
 				<div class="event-details-venue">
-					<h3>The Christian Wedding Ceremony will be held at</h3>
+					<h3>The Christian Wedding Ceremony, cocktail hour and reception will be held at</h3>
 					<h1>The Greenhouse at the Royal Ambassador</h1>
 					<h3>
 						15430 Innis Lake Road<br/>
@@ -274,10 +274,32 @@
 
 
 		<section id="accommodations">
+
 			<div class="accommodations-header">
 				<h1>Accommodations</h1>
 				<br/>
 				<img src="../images/event-details-underline.svg"/>
+			</div>
+
+			<div class="accommodations-container">
+
+				<div id="accommodations-map-canvas">
+				</div>
+
+				<div class="accommodations-POI">
+					<h2> Points of Interest</h2>
+
+					<div class="accommodations-POIitem">
+						<h3>Hotel</h3>
+					</div>
+					<div class="accommodations-POIitem">
+						<h3>Hindu Wedding Venue</h3>
+					</div>
+					<div class="accommodations-POIitem">
+						<h3>Christian Wedding Venue</h3>
+					</div>
+				</div>
+
 			</div>
 		</section>
 		<!-- <section id="registry">
@@ -309,8 +331,10 @@
 
 <!-- JS Files -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEuidsKfpkfpYpxiMVKI3EyTQXCq7fHjI"></script>
 <script src="../js/jquery.easing.min.js"></script>
 <script src="../js/skrollr.js"></script>
+<script src="../js/maps.js"></script>
 <script src="../js/main.js"></script>
 </body>
 </html>
