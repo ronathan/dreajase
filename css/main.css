@@ -125,9 +125,43 @@ body {
           border-top: 1px solid #F7D6A9;
           border-bottom: 1px solid #F7D6A9; }
           .container main section#landing div.landing-gold-background div#landing-image div.gold-mask {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
             width: 100%;
             height: 100%;
             background-color: rgba(243, 192, 120, 0.2); }
+            .container main section#landing div.landing-gold-background div#landing-image div.gold-mask div.landing-page-headline2 {
+              -webkit-animation-delay: 400ms;
+              -moz-animation-delay: 400ms;
+              -ms-animation-delay: 400ms;
+              -o-animation-delay: 400ms;
+              animation-delay: 400ms;
+              -webkit-animation-duration: 5000ms;
+              -moz-animation-duration: 5000ms;
+              -ms-animation-duration: 5000ms;
+              -o-animation-duration: 5000ms;
+              animation-duration: 5000ms;
+              margin: auto;
+              padding: 2em 2em;
+              vertical-align: center;
+              background-color: rgba(0, 0, 0, 0.8);
+              border: 1px solid #F7D6A9;
+              height: auto;
+              width: 300px;
+              text-align: center; }
+              .container main section#landing div.landing-gold-background div#landing-image div.gold-mask div.landing-page-headline2 h1 {
+                color: #FBFBF4; }
+              .container main section#landing div.landing-gold-background div#landing-image div.gold-mask div.landing-page-headline2 p {
+                margin: 0.5em;
+                font-size: 1.35em;
+                color: #F7D6A9; }
       .container main section#landing div.landing-page-headline {
         position: absolute;
         padding: 2em 2em;

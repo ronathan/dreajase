@@ -151,9 +151,38 @@ body {
 					border-bottom: 1px solid $light-gold;
 
 					div.gold-mask {
+						@include flex-display;
+						@include flex-align-items(center);
+
 						width:100%;
 				  		height:100%;
 				  		background-color:rgba(243, 192, 120, 0.2);
+
+	  					div.landing-page-headline2 {
+
+	  						@include animation-delay(400ms);
+	  						@include animation-duration(5000ms);
+				
+							margin: auto;
+							padding: 2em 2em;
+							vertical-align: center;
+							
+							background-color: rgba(0,0,0,0.8);
+							border: 1px solid $light-gold;
+							height: auto;
+							width: 300px;
+
+							text-align: center;
+
+							h1 {
+								color: $off-white;
+							}
+							p {
+								margin: 0.5em;
+								font-size: 1.35em;
+								color: $light-gold;
+							}
+						}
 					}
 				}
 			}

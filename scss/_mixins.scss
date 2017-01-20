@@ -90,6 +90,14 @@
     -o-animation-delay: $val;
     animation-delay: $val;
 }
+
+@mixin animation-duration($val) {
+    -webkit-animation-duration: $val;
+    -moz-animation-duration: $val;
+    -ms-animation-duration: $val;
+    -o-animation-duration: $val;
+    animation-duration: $val;
+}
 @mixin placeholder {
     &::-webkit-input-placeholder {@content}
     &:-moz-placeholder           {@content}
