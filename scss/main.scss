@@ -16,6 +16,7 @@ $black: #030301;
 $purple: #1E152A;
 $emerald: #12424E;
 $navy: #235789;
+$maroon: #32021F;
 
 * {
 	-webkit-box-sizing: border-box;
@@ -61,27 +62,28 @@ body {
 	@include flex-display;
 	@include flex-direction-row;
 	@include justify-content(center);
+	@include flex-align-items(center);
 
 	position: relative;
 	z-index: 10;
 	height: 36px;
 	width: 100%;
-	padding: 12px 60px;
 	background-color: $white;
 	border-bottom: 1px solid $gold;
 	
 
 	.navbar-item {
 		position: relative;
-		margin: 0 4em;
-		width: auto;
+		margin: 0 2em;
+		width: 150px;
 
 		cursor: pointer;
 		text-align: center;
 		p {
 			margin: 0;
 			font-family: 'Merriweather', serif;
-			color: $gold;
+			color: $black;
+			font-size: 1em;
 			font-weight: 300;
 
 			@include transition(all, 500ms, ease);
@@ -412,15 +414,14 @@ body {
 			@include flex-display;
 			@include flex-direction-column;
 
+			padding: 4em 0;
 			height: auto;
 
-			background-color: $white;
+			background-color: $maroon;
 
 			div.accommodations-header {
 
 				text-align: center;
-				margin-top: 2em;
-				margin-top: 4em;
 				
 				img {
 					margin-top: -0.5em;
@@ -430,26 +431,45 @@ body {
 			div.accommodations-container {
 				@include flex-display;
 				@include flex-direction-row;
+				@include flex-wrap(wrap);
 				@include justify-content(center);
 
-				margin: 2em 0;
+				margin: 3em 0;
 
 				div#accommodations-map-canvas {
-					height: 300px;
+					height: 400px;
 					width: 400px;
-					margin: 0 2em;
-					border: 1px solid #000000; 
+					margin: 0 1em;
+					border: 1px solid $gold; 
 				}
 				div.accommodations-POI {
-					height: auto;
+					height: 400px;
 					width: 400px;
-					margin: 0 2em;
-					padding: 1em;
+					margin: 0 1em;
+					padding: 3em 2em;
 					text-align: center;
-					border: 1px solid #000000; 
+					border: 1px solid $gold; 
 
-					h3 {
+					div.accommodations-POIitem {
+						margin: 2em 0;
 						text-align: left;
+
+						h3 {
+							cursor: pointer;
+							@include transition(all, 500ms, ease);
+						}
+
+						h3.selected {
+							color: $white;
+						}
+
+						h3:hover {
+							color: $white;
+						}
+
+						p {
+							color: $white;
+						}
 					}
 				}
 			}
