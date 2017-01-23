@@ -1,22 +1,5 @@
 @import "mixins";
-
-$gold: #F3C078;
-$light-gold: #F7D6A9;
-$dark-gold: #6F5837;
-$landing-page-background: #FCF3E6;
-
-$grey: #E3E3E3;
-$dark-grey: #545F66;
-$off-white: #FBFBF4;
-$white: #FFFFFF;
-
-$light-black: #757574;
-$black: #030301;
-
-$purple: #1E152A;
-$emerald: #12424E;
-$navy: #235789;
-$maroon: #32021F;
+@import "colors";
 
 * {
 	-webkit-box-sizing: border-box;
@@ -89,7 +72,7 @@ body {
 			@include transition(all, 500ms, ease);
 		}
 		p:hover {
-			color: $dark-gold;
+			color: $gold;
 		}
 	}
 }
@@ -122,7 +105,7 @@ body {
 
 		section {
 			position: relative;
-			padding: 3em 10em;
+			padding: 3em 1em;
 			height: 100%;
 			width: 100%;
 			border-top: 1px solid $light-gold;
@@ -193,12 +176,13 @@ body {
 				position: absolute;
 				
 				padding: 2em 2em;
-				top: 18em;
+				top: 50%;				
 				right: 12em;
+				margin-top: -115px;
 				
-				background-color: rgba(0,0,0,0.2);
+				background-color: rgba(0,0,0,0.7);
 				border: 1px solid $light-gold;
-				height: auto;
+				height: 230px;
 				width: 200px;
 
 				text-align: center;
@@ -219,6 +203,7 @@ body {
 			@include justify-content(center);
 			@include flex-wrap(wrap);
 			@include flex-align-items(center);
+			@include flex-align-content(center);
 			
 			padding: 0;
 			background-color: $purple;
@@ -362,19 +347,17 @@ body {
 
 						div.event-details-timeline-time {
 							@include flex-display;
-							@include flex-direction-column;
+							@include flex-direction-row;
 							@include justify-content(center);
 							@include flex-align-items(center);
 
-							padding: 1em 0;
-							padding-right: 4em;
+							padding: 1em 4em;
 							border-right: 1px solid $gold;
 						}
 
 						div.event-details-timeline-details {
-							padding: 1em 0;
-							padding-left: 4em;
-							width: 600px;
+							padding: 1em 4em;
+							max-width: 600px;
 
 							p {
 								margin: 0;

@@ -40,10 +40,17 @@
 }
 
 @mixin flex-align-items($type) {
-    -webkit-box-align: $type;
+    -webkit-box-align-items: $type;
     -webkit-align-items: $type;
-    -ms-flex-align: $type;
+    -ms-flex-align-items: $type;
     align-items: $type;
+}
+
+@mixin flex-align-content($type) {
+    -webkit-box-align-content: $type;
+    -webkit-align-content: $type;
+    -ms-flex-align-content: $type;
+    align-content: $type;
 }
 
 @mixin flex-align-items-start {
