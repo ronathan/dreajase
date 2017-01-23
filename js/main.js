@@ -86,7 +86,8 @@ $(function() {
 
 		var $this = $(this);
 		var section = $this.attr('data-section');
-		$('main#skrollr-body').stop().animate(
+		$('body').scroll();
+		$('body').stop().animate(
 		{ scrollTop : ( $('#' + section).offset().top + 'px' ) }, 
 		650, 
 		'easeInOutExpo');
