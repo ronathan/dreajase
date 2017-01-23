@@ -98,6 +98,8 @@ body {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   width: 100%; }
   .container main {
     width: 100%; }
@@ -167,6 +169,16 @@ body {
                 font-size: 1.35em;
                 color: #F7D6A9; }
       .container main section#landing div.landing-page-headline {
+        -webkit-animation-delay: 400ms;
+        -moz-animation-delay: 400ms;
+        -ms-animation-delay: 400ms;
+        -o-animation-delay: 400ms;
+        animation-delay: 400ms;
+        -webkit-animation-duration: 5000ms;
+        -moz-animation-duration: 5000ms;
+        -ms-animation-duration: 5000ms;
+        -o-animation-duration: 5000ms;
+        animation-duration: 5000ms;
         position: absolute;
         padding: 2em 2em;
         top: 50%;
@@ -307,6 +319,14 @@ body {
         -webkit-flex-direction: row;
         -ms-flex-direction: row;
         flex-direction: row;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align-items: center;
+        -webkit-align-items: center;
+        -ms-flex-align-items: center;
+        align-items: center;
         text-align: center; }
         .container main section#event-details div.event-details-menu div.event-details-menu-item {
           padding: 12px 24px;
@@ -472,7 +492,7 @@ body {
         text-align: center; }
         .container main section#accommodations div.accommodations-header img {
           margin-top: -0.5em; }
-      .container main section#accommodations div.accommodations-container {
+      .container main section#accommodations div#accommodations-container {
         display: -webkit-box;
         display: -moz-box;
         display: -ms-flexbox;
@@ -491,33 +511,43 @@ body {
         -ms-flex-pack: center;
         justify-content: center;
         margin: 3em 0; }
-        .container main section#accommodations div.accommodations-container div#accommodations-map-canvas {
+        .container main section#accommodations div#accommodations-container div#accommodations-map-canvas {
+          -webkit-animation-delay: 800ms;
+          -moz-animation-delay: 800ms;
+          -ms-animation-delay: 800ms;
+          -o-animation-delay: 800ms;
+          animation-delay: 800ms;
           height: 400px;
           width: 400px;
           margin: 0 1em;
           border: 1px solid #F3C078; }
-        .container main section#accommodations div.accommodations-container div.accommodations-POI {
+        .container main section#accommodations div#accommodations-container div#accommodations-POI {
+          -webkit-animation-delay: 800ms;
+          -moz-animation-delay: 800ms;
+          -ms-animation-delay: 800ms;
+          -o-animation-delay: 800ms;
+          animation-delay: 800ms;
           height: 400px;
           width: 400px;
           margin: 0 1em;
           padding: 3em 2em;
           text-align: center;
           border: 1px solid #F3C078; }
-          .container main section#accommodations div.accommodations-container div.accommodations-POI div.accommodations-POIitem {
+          .container main section#accommodations div#accommodations-container div#accommodations-POI div.accommodations-POIitem {
             margin: 2em 0;
             text-align: left; }
-            .container main section#accommodations div.accommodations-container div.accommodations-POI div.accommodations-POIitem h3 {
+            .container main section#accommodations div#accommodations-container div#accommodations-POI div.accommodations-POIitem h3 {
               cursor: pointer;
               -webkit-transition: all 500ms ease;
               -moz-transition: all 500ms ease;
               -ms-transition: all 500ms ease;
               -o-transition: all 500ms ease;
               transition: all 500ms ease; }
-            .container main section#accommodations div.accommodations-container div.accommodations-POI div.accommodations-POIitem h3.selected {
+            .container main section#accommodations div#accommodations-container div#accommodations-POI div.accommodations-POIitem h3.selected {
               color: #FFFFFF; }
-            .container main section#accommodations div.accommodations-container div.accommodations-POI div.accommodations-POIitem h3:hover {
+            .container main section#accommodations div#accommodations-container div#accommodations-POI div.accommodations-POIitem h3:hover {
               color: #FFFFFF; }
-            .container main section#accommodations div.accommodations-container div.accommodations-POI div.accommodations-POIitem p {
+            .container main section#accommodations div#accommodations-container div#accommodations-POI div.accommodations-POIitem p {
               color: #FFFFFF; }
     .container main section#rsvp {
       display: -webkit-box;

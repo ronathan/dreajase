@@ -98,6 +98,10 @@ body {
 .container {
 	@include flex-display;
 	@include flex-direction-row;
+	
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
+
 	width: 100%;
 
 	main {
@@ -173,6 +177,9 @@ body {
 			}
 
 			div.landing-page-headline {
+				@include animation-delay(400ms);
+				@include animation-duration(5000ms);
+				
 				position: absolute;
 				
 				padding: 2em 2em;
@@ -287,6 +294,8 @@ body {
 				margin: 2em auto;
 				@include flex-display;
 				@include flex-direction-row;
+				@include justify-content(center);
+				@include flex-align-items(center);
 				text-align: center;
 
 				div.event-details-menu-item {
@@ -411,7 +420,7 @@ body {
 				}
 			}
 
-			div.accommodations-container {
+			div#accommodations-container {
 				@include flex-display;
 				@include flex-direction-row;
 				@include flex-wrap(wrap);
@@ -420,12 +429,14 @@ body {
 				margin: 3em 0;
 
 				div#accommodations-map-canvas {
+					@include animation-delay(800ms); 
 					height: 400px;
 					width: 400px;
 					margin: 0 1em;
 					border: 1px solid $gold; 
 				}
-				div.accommodations-POI {
+				div#accommodations-POI {
+					@include animation-delay(800ms); 
 					height: 400px;
 					width: 400px;
 					margin: 0 1em;

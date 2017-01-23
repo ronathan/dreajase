@@ -1,5 +1,6 @@
 <html>
 <head>
+	<meta name="viewport" content="initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Open+Sans:300" rel="stylesheet">
 	<!-- <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script|Roboto:100|Open+Sans" rel="stylesheet"> -->
 	<link rel="stylesheet" type="text/css" href="../css/normalize.css" media="screen"/>
@@ -22,7 +23,7 @@
 				</div>
 			</div>
 
-			<div class="landing-page-headline">
+			<div class="landing-page-headline animated fadeIn">
 				<h1>Andrea<br/>&<br/>Jason</h1><br/>
 				<p>June 2 & 3, 2017</p>
 			</div>
@@ -276,15 +277,15 @@
 
 		<section id="accommodations">
 
-			<div class="accommodations-header">
+			<div class="accommodations-header hidden">
 				<h1>Accommodations</h1>
 				<br/>
 				<img src="../images/event-details-underline.svg"/>
 			</div>
 
-			<div class="accommodations-container">
+			<div id="accommodations-container">
 
-				<div class="accommodations-POI">
+				<div id="accommodations-POI" class="hidden">
 
 					<h2>Points of Interest</h2>
 
@@ -307,7 +308,7 @@
 					</div>
 				</div>
 
-				<div id="accommodations-map-canvas">
+				<div id="accommodations-map-canvas" class="hidden">
 				</div>
 
 			</div>

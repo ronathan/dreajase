@@ -90,10 +90,10 @@ $(function() {
         bounds.extend(_currentMarkers[i].position);
       }
 
+      $map.fitBounds(bounds);
+      
       if(_currentMarkers.length == 1) {
         $map.setZoom(12);
-      } else {
-        $map.fitBounds(bounds);
       }
 
       // var listener = google.maps.event.addListener(map, "idle", function() { 

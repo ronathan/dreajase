@@ -4,15 +4,18 @@ $(function() {
 	var $navbar = $('#navbar');
 	var $sectionCouple = $('section#couple');
 	var $sectionEventDetails = $('section#event-details');
+	var $sectionAccommodations = $('section#accommodations');
 	var $sectionRSVP = $('section#rsvp');
 
 	var sectionCoupleOffset = $sectionCouple.offset().top;
 	var sectionEventDetailsOffset = $sectionEventDetails.offset().top;
+	var accommodationsOffset = $sectionAccommodations.offset().top;
 	var sectionRSVPOffset = $sectionRSVP.offset().top;
 
 	// Tracking for SVG animations
 	var hasDrawnAnimationsForCouple = false;
 	var hasDrawnAnimationsForEventDetails = false;
+	var hasDrawnAnimationsForAccommodations = false;
 
 	// Scroll Tracking
 	var s = skrollr.init({ 
@@ -57,6 +60,14 @@ $(function() {
 				$('div.event-details-menu').addClass('animated fadeIn');
 				$('div.event-details-venue').addClass('animated fadeInUp');
 				$('div.event-details-timeline-section').addClass('animated fadeInUp');
+			}
+
+			if(data.curTop >= (accommodationsOffset - 400) && !hasDrawnAnimationsForAccommodations) {
+
+				hasDrawnAnimationsForAccommodations = true;
+				$('.accommodations-header').addClass('animated fadeIn');
+				$('#accommodations-POI').addClass('animated fadeInLeft');
+				$('#accommodations-map-canvas').addClass('animated fadeInRight');
 			}
 		}
 	});
