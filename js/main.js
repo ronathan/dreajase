@@ -86,7 +86,6 @@ $(function() {
 
 		var $this = $(this);
 		var section = $this.attr('data-section');
-		$('body').scroll();
 		$('body').stop().animate(
 		{ scrollTop : ( $('#' + section).offset().top + 'px' ) }, 
 		650, 
