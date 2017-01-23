@@ -35,6 +35,8 @@ p {
 body {
 	font-size: 12px;
 	font-family: Helvetica;
+	height: 100%;
+	width: 100%;
 	color: $gold;
 }
 .hidden {
@@ -95,437 +97,433 @@ body {
 // 	@include animation(erase, 400ms, linear, backwards);
 // }
 
-.container {
+main {
 	@include flex-display;
-	@include flex-direction-row;
+	@include flex-direction-column;
 	
-	overflow: scroll;
+	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
 
 	width: 100%;
 
-	main {
+	section {
+		position: relative;
+		padding: 3em 1em;
+		height: 100%;
 		width: 100%;
+		border-top: 1px solid $light-gold;
+		border-bottom: 1px solid $light-gold;
+	}
+	section.extra-margin {
+		margin-top: 50px;	
+	}
+	section#landing {
+		padding: 30px 0;
 
-		section {
-			position: relative;
-			padding: 3em 1em;
+		div.landing-gold-background {
 			height: 100%;
 			width: 100%;
-			border-top: 1px solid $light-gold;
-			border-bottom: 1px solid $light-gold;
-		}
-		section.extra-margin {
-			margin-top: 50px;	
-		}
-		section#landing {
 			padding: 30px 0;
+			background-color: $landing-page-background;
+			border-top: 1px solid $off-white;
+			border-bottom: 1px solid $off-white;
 
-			div.landing-gold-background {
+			div#landing-image {
 				height: 100%;
 				width: 100%;
-				padding: 30px 0;
-				background-color: $landing-page-background;
-				border-top: 1px solid $off-white;
-				border-bottom: 1px solid $off-white;
+				background-size: cover;
+				background-position: bottom center;
+				background-repeat: no-repeat;
+				background-image: url('../images/landing-image.jpg');
+				border-top: 1px solid $light-gold;
+				border-bottom: 1px solid $light-gold;
 
-				div#landing-image {
-					height: 100%;
-					width: 100%;
-					background-size: cover;
-					background-position: bottom center;
-					background-repeat: no-repeat;
-					background-image: url('../images/landing-image.jpg');
-					border-top: 1px solid $light-gold;
-					border-bottom: 1px solid $light-gold;
-
-					div.gold-mask {
-						@include flex-display;
-						@include flex-align-items(center);
-
-						width:100%;
-				  		height:100%;
-				  		background-color:rgba(243, 192, 120, 0.2);
-
-	  					div.landing-page-headline2 {
-
-	  						@include animation-delay(400ms);
-	  						@include animation-duration(5000ms);
-				
-							margin: auto;
-							padding: 2em 2em;
-							vertical-align: center;
-							
-							background-color: rgba(0,0,0,0.8);
-							border: 1px solid $light-gold;
-							height: auto;
-							width: 300px;
-
-							text-align: center;
-
-							h1 {
-								color: $off-white;
-							}
-							p {
-								margin: 0.5em;
-								font-size: 1.35em;
-								color: $light-gold;
-							}
-						}
-					}
-				}
-			}
-
-			div.landing-page-headline {
-				@include animation-delay(400ms);
-				@include animation-duration(5000ms);
-				
-				position: absolute;
-				
-				padding: 2em 2em;
-				top: 50%;				
-				right: 12em;
-				margin-top: -115px;
-				
-				background-color: rgba(0,0,0,0.7);
-				border: 1px solid $light-gold;
-				height: 230px;
-				width: 200px;
-
-				text-align: center;
-
-				h1 {
-					color: $off-white;
-				}
-				p {
-					font-size: 1.35em;
-					color: $light-gold;
-				}
-			}
-		}
-
-		section#couple {
-			@include flex-display;
-			@include flex-direction-row;
-			@include justify-content(center);
-			@include flex-wrap(wrap);
-			@include flex-align-items(center);
-			@include flex-align-content(center);
-			
-			padding: 0;
-			background-color: $purple;
-
-			div.couple-image-container {
-				height: 100%;
-				margin: 0 3em;
-				width: 450px;
-				border-left: 1px solid $gold;
-				border-right: 1px solid $gold;
-
-				div.couple-image {
-					height: 100%;
-					background-size: cover;
-					background-position: center center;
-					background-repeat: no-repeat;
-					background-image: url('../images/thecouple3.jpg');
-
-					div.gold-mask {
-						width:100%;
-				  		height:100%;
-				  		background-color:rgba(243, 192, 120, 0.4);
-				  		color: $gold;
-					}
-				}
-			}
-
-			div.couple-desc {
-				@include flex-display;
-				@include flex-direction-column;
-
-				margin: 0 3em;
-				margin-top: -4em;
-				width: 400px;
-
-
-				div.couple-header {
-					@include animation-delay(800ms);
-					
-					margin-bottom: 4em;
-					text-align: left;
-				}
-				div.couple-address {
-					@include animation-delay(1.6s);
-
-					text-align: left;
-				}
-				div.couple-desc-writeup {
-					@include animation-delay(1.6s);
-					p {
-						color: $off-white;
-						margin: 1em 0;
-					}
-				}
-				div.couple-signature {
-					@include animation-delay(2.4s);
-
-					margin-top: 4em;
-					text-align: right;
-				}
-			}
-		}
-
-		section#event-details {
-			@include flex-display;
-			@include flex-direction-column;
-			@include transition(all, 500ms, ease);
-
-			height: auto;
-			text-align: center;
-
-			div.event-details-header {
-				margin: 2em auto;
-				
-				img {
-					margin-top: -0.5em;
-				}
-			}
-			
-			div.event-details-menu {
-				margin: 2em auto;
-				@include flex-display;
-				@include flex-direction-row;
-				@include justify-content(center);
-				@include flex-align-items(center);
-				text-align: center;
-
-				div.event-details-menu-item {
-					padding: 12px 24px;
-					cursor: pointer;
-					h3 {
-						@include transition(all, 500ms, ease);
-					}
-					h3:hover {
-						color: $gold;
-					}
-				}
-				div.event-details-menu-item.selected {
-					border-bottom: 1px solid $gold;
-					
-					h3 {
-						color: $gold;
-					}
-				}
-			}
-
-			div#event-details-item-christian {
-				display: none;
-			}
-
-			div.event-details-item {
-
-				div.event-details-venue {
-					margin: 2em auto;
-
-					h3 {
-						margin: 0;
-					}
-				}
-
-				div.event-details-venue-logo {
-					margin: 4em 0;
-				}
-
-				div.event-details-timeline {
-					margin: 2em auto;
+				div.gold-mask {
 					@include flex-display;
-					@include flex-direction-column;
-					@include flex-wrap(wrap);
-					@include justify-content(center);
 					@include flex-align-items(center);
 
-					div.event-details-timeline-section {
-						@include flex-display;
-						@include flex-direction-row;
-						@include flex-wrap(wrap);
-						@include justify-content(center);
-						opacity: 0;
+					width:100%;
+			  		height:100%;
+			  		background-color:rgba(243, 192, 120, 0.2);
 
-						padding: 0 2em;
+  					div.landing-page-headline2 {
+
+  						@include animation-delay(400ms);
+  						@include animation-duration(5000ms);
+			
+						margin: auto;
+						padding: 2em 2em;
+						vertical-align: center;
+						
+						background-color: rgba(0,0,0,0.8);
+						border: 1px solid $light-gold;
 						height: auto;
-						text-align: left;
+						width: 300px;
 
-						div.event-details-timeline-time {
-							@include flex-display;
-							@include flex-direction-row;
-							@include justify-content(center);
-							@include flex-align-items(center);
+						text-align: center;
 
-							padding: 1em 4em;
-							border-right: 1px solid $gold;
+						h1 {
+							color: $off-white;
 						}
-
-						div.event-details-timeline-details {
-							padding: 1em 4em;
-							max-width: 600px;
-
-							p {
-								margin: 0;
-							}
+						p {
+							margin: 0.5em;
+							font-size: 1.35em;
+							color: $light-gold;
 						}
 					}
-
-					div.event-details-timeline-section:nth-child(0) { @include animation-delay(200ms); }
-					div.event-details-timeline-section:nth-child(1) { @include animation-delay(600ms); }
-					div.event-details-timeline-section:nth-child(2) { @include animation-delay(1000ms); }
-					div.event-details-timeline-section:nth-child(3) { @include animation-delay(1400ms); }
-					div.event-details-timeline-section:nth-child(4) { @include animation-delay(1800ms); }
-					div.event-details-timeline-section:nth-child(5) { @include animation-delay(2200ms); }
-					div.event-details-timeline-section:nth-child(6) { @include animation-delay(2600ms); }
-				}
-
-				div.event-details-logo {
-					margin: 5em 0;
 				}
 			}
 		}
-		section#event-details.hindu {
-			background-color: $emerald;
+
+		div.landing-page-headline {
+			@include animation-delay(400ms);
+			@include animation-duration(5000ms);
 			
-			p, h3 {
-				color: $white;
-			}			
+			position: absolute;
+			
+			padding: 2em 2em;
+			top: 50%;				
+			right: 12em;
+			margin-top: -115px;
+			
+			background-color: rgba(0,0,0,0.7);
+			border: 1px solid $light-gold;
+			height: 230px;
+			width: 200px;
+
+			text-align: center;
+
+			h1 {
+				color: $off-white;
+			}
+			p {
+				font-size: 1.35em;
+				color: $light-gold;
+			}
 		}
-		section#event-details.christian {
-			background-color: $off-white;
-			p, h3 {
-				color: $black;
+	}
+
+	section#couple {
+		@include flex-display;
+		@include flex-direction-row;
+		@include justify-content(center);
+		@include flex-wrap(wrap);
+		@include flex-align-items(center);
+		@include flex-align-content(center);
+		
+		padding: 0;
+		background-color: $purple;
+
+		div.couple-image-container {
+			height: 100%;
+			margin: 0 3em;
+			width: 450px;
+			border-left: 1px solid $gold;
+			border-right: 1px solid $gold;
+
+			div.couple-image {
+				height: 100%;
+				background-size: cover;
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-image: url('../images/thecouple3.jpg');
+
+				div.gold-mask {
+					width:100%;
+			  		height:100%;
+			  		background-color:rgba(243, 192, 120, 0.4);
+			  		color: $gold;
+				}
 			}
 		}
 
-		section#accommodations {
+		div.couple-desc {
 			@include flex-display;
 			@include flex-direction-column;
 
-			padding: 4em 0;
-			height: auto;
+			margin: 0 3em;
+			margin-top: -4em;
+			width: 400px;
 
-			background-color: $maroon;
 
-			div.accommodations-header {
-
-				text-align: center;
+			div.couple-header {
+				@include animation-delay(800ms);
 				
-				img {
-					margin-top: -0.5em;
+				margin-bottom: 4em;
+				text-align: left;
+			}
+			div.couple-address {
+				@include animation-delay(1.6s);
+
+				text-align: left;
+			}
+			div.couple-desc-writeup {
+				@include animation-delay(1.6s);
+				p {
+					color: $off-white;
+					margin: 1em 0;
 				}
 			}
+			div.couple-signature {
+				@include animation-delay(2.4s);
 
-			div#accommodations-container {
-				@include flex-display;
-				@include flex-direction-row;
-				@include flex-wrap(wrap);
-				@include justify-content(center);
-
-				margin: 3em 0;
-
-				div#accommodations-map-canvas {
-					@include animation-delay(800ms); 
-					height: 400px;
-					width: 400px;
-					margin: 0 1em;
-					border: 1px solid $gold; 
-				}
-				div#accommodations-POI {
-					@include animation-delay(800ms); 
-					height: 400px;
-					width: 400px;
-					margin: 0 1em;
-					padding: 3em 2em;
-					text-align: center;
-					border: 1px solid $gold; 
-
-					div.accommodations-POIitem {
-						margin: 2em 0;
-						text-align: left;
-
-						h3 {
-							cursor: pointer;
-							@include transition(all, 500ms, ease);
-						}
-
-						h3.selected {
-							color: $white;
-						}
-
-						h3:hover {
-							color: $white;
-						}
-
-						p {
-							color: $white;
-						}
-					}
-				}
+				margin-top: 4em;
+				text-align: right;
 			}
 		}
+	}
 
-		section#rsvp {
+	section#event-details {
+		@include flex-display;
+		@include flex-direction-column;
+		@include transition(all, 500ms, ease);
+
+		height: auto;
+		text-align: center;
+
+		div.event-details-header {
+			margin: 2em auto;
+			
+			img {
+				margin-top: -0.5em;
+			}
+		}
+		
+		div.event-details-menu {
+			margin: 2em auto;
 			@include flex-display;
 			@include flex-direction-row;
 			@include justify-content(center);
 			@include flex-align-items(center);
-
-			height: 100%;
-			background-color: $white;
 			text-align: center;
 
-			div.rsvp-card {
+			div.event-details-menu-item {
+				padding: 12px 24px;
+				cursor: pointer;
+				h3 {
+					@include transition(all, 500ms, ease);
+				}
+				h3:hover {
+					color: $gold;
+				}
+			}
+			div.event-details-menu-item.selected {
+				border-bottom: 1px solid $gold;
+				
+				h3 {
+					color: $gold;
+				}
+			}
+		}
+
+		div#event-details-item-christian {
+			display: none;
+		}
+
+		div.event-details-item {
+
+			div.event-details-venue {
+				margin: 2em auto;
+
+				h3 {
+					margin: 0;
+				}
+			}
+
+			div.event-details-venue-logo {
+				margin: 4em 0;
+			}
+
+			div.event-details-timeline {
+				margin: 2em auto;
 				@include flex-display;
 				@include flex-direction-column;
-				
-				max-width: 600px;
-				text-align: center;
+				@include flex-wrap(wrap);
+				@include justify-content(center);
+				@include flex-align-items(center);
 
-				div.rsvp-border {
-					padding: 2em 0;
+				div.event-details-timeline-section {
+					@include flex-display;
+					@include flex-direction-row;
+					@include flex-wrap(wrap);
+					@include justify-content(center);
+					opacity: 0;
+
+					padding: 0 2em;
+					height: auto;
+					text-align: left;
+
+					div.event-details-timeline-time {
+						@include flex-display;
+						@include flex-direction-row;
+						@include justify-content(center);
+						@include flex-align-items(center);
+
+						padding: 1em 4em;
+						border-right: 1px solid $gold;
+					}
+
+					div.event-details-timeline-details {
+						padding: 1em 4em;
+						max-width: 600px;
+
+						p {
+							margin: 0;
+						}
+					}
 				}
 
-				form {
-					padding: 2em 0;
+				div.event-details-timeline-section:nth-child(0) { @include animation-delay(200ms); }
+				div.event-details-timeline-section:nth-child(1) { @include animation-delay(600ms); }
+				div.event-details-timeline-section:nth-child(2) { @include animation-delay(1000ms); }
+				div.event-details-timeline-section:nth-child(3) { @include animation-delay(1400ms); }
+				div.event-details-timeline-section:nth-child(4) { @include animation-delay(1800ms); }
+				div.event-details-timeline-section:nth-child(5) { @include animation-delay(2200ms); }
+				div.event-details-timeline-section:nth-child(6) { @include animation-delay(2600ms); }
+			}
 
-					input[type="text"] {
+			div.event-details-logo {
+				margin: 5em 0;
+			}
+		}
+	}
+	section#event-details.hindu {
+		background-color: $emerald;
+		
+		p, h3 {
+			color: $white;
+		}			
+	}
+	section#event-details.christian {
+		background-color: $off-white;
+		p, h3 {
+			color: $black;
+		}
+	}
 
-						@include placeholder {
-							color: $gold;
-							font-weight: 100;
-						}
-						margin: 0.5em 0;
-						padding: 0.5em;
-						width: 100%;
-						font-size: 1em;
+	section#accommodations {
+		@include flex-display;
+		@include flex-direction-column;
 
-						background-color: $black;
-						border: none;
-						border-bottom: 1px solid $gold;
+		padding: 4em 0;
+		height: auto;
+
+		background-color: $maroon;
+
+		div.accommodations-header {
+
+			text-align: center;
+			
+			img {
+				margin-top: -0.5em;
+			}
+		}
+
+		div#accommodations-container {
+			@include flex-display;
+			@include flex-direction-row;
+			@include flex-wrap(wrap);
+			@include justify-content(center);
+
+			margin: 3em 0;
+
+			div#accommodations-map-canvas {
+				@include animation-delay(800ms); 
+				height: 400px;
+				width: 400px;
+				margin: 0 1em;
+				border: 1px solid $gold; 
+			}
+			div#accommodations-POI {
+				@include animation-delay(800ms); 
+				height: 400px;
+				width: 400px;
+				margin: 0 1em;
+				padding: 3em 2em;
+				text-align: center;
+				border: 1px solid $gold; 
+
+				div.accommodations-POIitem {
+					margin: 2em 0;
+					text-align: left;
+
+					h3 {
+						cursor: pointer;
+						@include transition(all, 500ms, ease);
 					}
 
-					div#rsvp-submit-btn {
-						margin: 0 auto;
-						margin-top: 1.5em;
-						padding: 1em 0.5em;
-						width: 300px;
-
-						background-color: $gold;
-						color: $black;
-						font-size: 1em;
-						font-weight: 700;
-						border-radius: 5px;
-						border: 1px solid $light-gold;
+					h3.selected {
+						color: $white;
 					}
 
-					input:focus {
-						outline: none;
+					h3:hover {
+						color: $white;
 					}
+
+					p {
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+
+	section#rsvp {
+		@include flex-display;
+		@include flex-direction-row;
+		@include justify-content(center);
+		@include flex-align-items(center);
+
+		height: 100%;
+		background-color: $white;
+		text-align: center;
+
+		div.rsvp-card {
+			@include flex-display;
+			@include flex-direction-column;
+			
+			max-width: 600px;
+			text-align: center;
+
+			div.rsvp-border {
+				padding: 2em 0;
+			}
+
+			form {
+				padding: 2em 0;
+
+				input[type="text"] {
+
+					@include placeholder {
+						color: $gold;
+						font-weight: 100;
+					}
+					margin: 0.5em 0;
+					padding: 0.5em;
+					width: 100%;
+					font-size: 1em;
+
+					background-color: $black;
+					border: none;
+					border-bottom: 1px solid $gold;
+				}
+
+				div#rsvp-submit-btn {
+					margin: 0 auto;
+					margin-top: 1.5em;
+					padding: 1em 0.5em;
+					width: 300px;
+
+					background-color: $gold;
+					color: $black;
+					font-size: 1em;
+					font-weight: 700;
+					border-radius: 5px;
+					border: 1px solid $light-gold;
+				}
+
+				input:focus {
+					outline: none;
 				}
 			}
 		}

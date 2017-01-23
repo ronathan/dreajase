@@ -7,16 +7,14 @@ $couple-breakdown2: 532px;
 $event-details-breakdown1: 907px;
 
 @media (max-width: $landing-page-breakdown1) {
-	.container {
-		main {
-			section#landing {
+	main {
+		section#landing {
 
-				div.landing-page-headline {
-					width: 320px;
-					right: 50%;
-					margin-right: -160px;
-					margin-top: -165px;
-				}
+			div.landing-page-headline {
+				width: 320px;
+				right: 50%;
+				margin-right: -160px;
+				margin-top: -165px;
 			}
 		}
 	}
@@ -24,31 +22,29 @@ $event-details-breakdown1: 907px;
 
 @media (max-width: $couple-breakdown1) {
 
-	.container {
-		main {
-			section#couple {
+	main {
+		section#couple {
 
-				padding: 4em 2em;
-				height: auto;
+			padding: 4em 2em;
+			height: auto;
 
-				div.couple-image-container {
-					margin: 0;
-					height: 300px;
-					width: 70%;
-					border: 1px solid $gold;
+			div.couple-image-container {
+				margin: 0;
+				height: 300px;
+				width: 70%;
+				border: 1px solid $gold;
+			}
+
+			div.couple-desc {
+				margin: 2em 0;
+				width: 70%;
+
+				div.couple-header {
+					margin-bottom: 1em;
 				}
 
-				div.couple-desc {
-					margin: 2em 0;
-					width: 70%;
-
-					div.couple-header {
-						margin-bottom: 1em;
-					}
-
-					div.couple-signature {
-						margin-top: 1em;
-					}
+				div.couple-signature {
+					margin-top: 1em;
 				}
 			}
 		}
@@ -59,17 +55,15 @@ $event-details-breakdown1: 907px;
 
 @media (max-width: $couple-breakdown2) {
 
-	.container {
-		main {
-			section#couple {
+	main {
+		section#couple {
 
-				div.couple-image-container {
-					width: 100%;
-				}
+			div.couple-image-container {
+				width: 100%;
+			}
 
-				div.couple-desc {
-					width: 100%;
-				}
+			div.couple-desc {
+				width: 100%;
 			}
 		}
 	}
@@ -77,23 +71,22 @@ $event-details-breakdown1: 907px;
 }
 
 @media (max-width: $event-details-breakdown1) {
-	.container {
-		main {
-			section#event-details {
-				div.event-details-item {
-					div.event-details-timeline {
-						div.event-details-timeline-section {
+	
+	main {
+		section#event-details {
+			div.event-details-item {
+				div.event-details-timeline {
+					div.event-details-timeline-section {
 
-							margin: 1em 0;
-							text-align: center;
+						margin: 1em 0;
+						text-align: center;
 
-							div.event-details-timeline-time {
-								border-right: none;
-								border-bottom: 1px solid $gold;
-							}
-							div.event-details-timeline-details {
+						div.event-details-timeline-time {
+							border-right: none;
+							border-bottom: 1px solid $gold;
+						}
+						div.event-details-timeline-details {
 
-							}
 						}
 					}
 				}
