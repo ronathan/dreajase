@@ -8,27 +8,29 @@
 }
 
 h1 {
-	font-family: 'Merriweather', serif, 'Baskerville';	
+	font-family: 'Ovo', serif, 'Baskerville';	
 	font-weight: 300;
 	font-size: 2em;
 	margin: 0;
+	color: $heading-text-color;
 }
 h2 {
-	font-family: 'Merriweather', serif, 'Baskerville';
+	font-family: 'Ovo', serif, 'Baskerville';
 	font-size: 1.35em;
 	font-weight: 300;
 	margin: 0;
+	color: $heading-text-color;
 }
 h3 {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 1.15em;
+	font-family: 'Merriweather', serif, 'Open Sans', sans-serif;
+	font-size: 1em;
 	font-weight: 300;
 	margin: 0;
 }
 p {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Merriweather', serif, 'Open Sans', sans-serif;
 	font-size: 0.85em;
-	color: $black;
+	color: $body-text;
 	margin: 1em 0px;
 	font-weight: 100;
 }
@@ -37,7 +39,6 @@ body {
 	font-family: Helvetica;
 	height: 100%;
 	width: 100%;
-	color: $gold;
 }
 .hidden {
 	opacity: 0;
@@ -54,7 +55,7 @@ body {
 	height: 36px;
 	width: 100%;
 	background-color: $white;
-	border-bottom: 1px solid $gold;
+	border-bottom: 1px solid $border-color;
 	
 
 	.navbar-item {
@@ -66,7 +67,7 @@ body {
 		text-align: center;
 		p {
 			margin: 0;
-			font-family: 'Merriweather', serif;
+			font-family: 'Ovo', serif;
 			color: $black;
 			font-size: 1em;
 			font-weight: 300;
@@ -74,7 +75,7 @@ body {
 			@include transition(all, 500ms, ease);
 		}
 		p:hover {
-			color: $gold;
+			color: #E3E3E3;
 		}
 	}
 }
@@ -108,11 +109,10 @@ main {
 
 	section {
 		position: relative;
-		padding: 3em 1em;
+		padding: 4em 1em;
 		height: 100%;
 		width: 100%;
-		border-top: 1px solid $light-gold;
-		border-bottom: 1px solid $light-gold;
+		border-bottom: 1px solid $border-color;
 	}
 	section.extra-margin {
 		margin-top: 50px;	
@@ -125,8 +125,8 @@ main {
 			width: 100%;
 			padding: 30px 0;
 			background-color: $landing-page-background;
-			border-top: 1px solid $off-white;
-			border-bottom: 1px solid $off-white;
+			border-top: 1px solid $border-color;
+			border-bottom: 1px solid $border-color;
 
 			div#landing-image {
 				height: 100%;
@@ -135,8 +135,8 @@ main {
 				background-position: bottom center;
 				background-repeat: no-repeat;
 				background-image: url('../images/landing-image.jpg');
-				border-top: 1px solid $light-gold;
-				border-bottom: 1px solid $light-gold;
+				border-top: 1px solid $border-color;
+				border-bottom: 1px solid $border-color;
 
 				div.gold-mask {
 					@include flex-display;
@@ -187,13 +187,15 @@ main {
 			margin-top: -115px;
 			
 			background-color: rgba(0,0,0,0.7);
-			border: 1px solid $light-gold;
+			border: 1px solid $landing-page-headline-border;
+			border-radius: 5px;
 			height: 230px;
 			width: 200px;
 
 			text-align: center;
 
 			h1 {
+				margin-top: 20px;
 				color: $off-white;
 			}
 			p {
@@ -212,26 +214,30 @@ main {
 		@include flex-align-content(center);
 		
 		padding: 0;
-		background-color: $purple;
+		background-color: $couple-background;
+
+		p {
+			color: $couple-text;
+		}
 
 		div.couple-image-container {
 			height: 100%;
 			margin: 0 3em;
 			width: 450px;
-			border-left: 1px solid $gold;
-			border-right: 1px solid $gold;
+			border-left: 1px solid $border-color;
+			border-right: 1px solid $border-color;
 
 			div.couple-image {
 				height: 100%;
 				background-size: cover;
-				background-position: center center;
+				background-position: bottom center;
 				background-repeat: no-repeat;
-				background-image: url('../images/thecouple3.jpg');
+				background-image: url('../images/thecouple3-2.jpeg');
 
 				div.gold-mask {
 					width:100%;
 			  		height:100%;
-			  		background-color:rgba(243, 192, 120, 0.4);
+			  		background-color:rgba(249, 248, 248, 0.1);
 			  		color: $gold;
 				}
 			}
@@ -245,11 +251,14 @@ main {
 			margin-top: -4em;
 			width: 400px;
 
+			h1, h2 {
+				color: $couple-heading-text;
+			}
 
 			div.couple-header {
 				@include animation-delay(800ms);
 				
-				margin-bottom: 4em;
+				margin-bottom: 2em;
 				text-align: left;
 			}
 			div.couple-address {
@@ -260,14 +269,13 @@ main {
 			div.couple-desc-writeup {
 				@include animation-delay(1.6s);
 				p {
-					color: $off-white;
 					margin: 1em 0;
 				}
 			}
 			div.couple-signature {
 				@include animation-delay(2.4s);
 
-				margin-top: 4em;
+				margin-top: 1em;
 				text-align: right;
 			}
 		}
@@ -287,6 +295,9 @@ main {
 			img {
 				margin-top: -0.5em;
 			}
+			img.hidden {
+				display: none;
+			}
 		}
 		
 		div.event-details-menu {
@@ -304,14 +315,14 @@ main {
 					@include transition(all, 500ms, ease);
 				}
 				h3:hover {
-					color: $gold;
+					color: $event-hindu-heading-text;
 				}
 			}
 			div.event-details-menu-item.selected {
-				border-bottom: 1px solid $gold;
+				border-bottom: 1px solid $event-hindu-heading-text;
 				
 				h3 {
-					color: $gold;
+					color: $event-hindu-heading-text;
 				}
 			}
 		}
@@ -328,10 +339,6 @@ main {
 				h3 {
 					margin: 0;
 				}
-			}
-
-			div.event-details-venue-logo {
-				margin: 4em 0;
 			}
 
 			div.event-details-timeline {
@@ -360,7 +367,7 @@ main {
 						@include flex-align-items(center);
 
 						padding: 1em 4em;
-						border-right: 1px solid $gold;
+						border-right: 1px solid $event-hindu-heading-text;
 					}
 
 					div.event-details-timeline-details {
@@ -384,20 +391,54 @@ main {
 
 			div.event-details-logo {
 				margin: 5em 0;
+
+				img {
+					width: 50px;
+					height: auto;
+				}
 			}
 		}
 	}
 	section#event-details.hindu {
-		background-color: $emerald;
-		
-		p, h3 {
-			color: $white;
-		}			
+		background-color: $event-hindu-background;
+
+		h1 {
+			color: $event-hindu-heading-text;
+		}
 	}
 	section#event-details.christian {
 		background-color: $off-white;
-		p, h3 {
-			color: $black;
+		
+		h1 {
+			color: $event-christian-heading-text;
+		}
+		div.event-details-menu {
+
+			div.event-details-menu-item {
+				h3:hover {
+					color: $event-christian-heading-text;
+				}
+			}
+			div.event-details-menu-item.selected {
+				border-bottom: 1px solid $event-christian-heading-text;
+				
+				h3 {
+					color: $event-christian-heading-text;
+				}
+			}
+		}
+
+		div.event-details-item {
+
+			div.event-details-timeline {
+
+				div.event-details-timeline-section {
+
+					div.event-details-timeline-time {
+						border-right: 1px solid $event-christian-heading-text;
+					}
+				}
+			}
 		}
 	}
 
@@ -408,11 +449,15 @@ main {
 		padding: 4em 0;
 		height: auto;
 
-		background-color: $maroon;
+		background-color: $accommodations-background;
 
 		div.accommodations-header {
 
 			text-align: center;
+
+			h1,h2 {
+				color: $accommodations-heading-text;
+			}
 			
 			img {
 				margin-top: -0.5em;
@@ -431,17 +476,19 @@ main {
 				@include animation-delay(800ms); 
 				height: 400px;
 				width: 400px;
-				margin: 0 1em;
-				border: 1px solid $gold; 
+				margin: 1em;
+				border: 1px solid $accommodations-heading-text; 
+				border-radius: 5px;
 			}
 			div#accommodations-POI {
 				@include animation-delay(800ms); 
 				height: 400px;
 				width: 400px;
-				margin: 0 1em;
+				margin: 1em;
 				padding: 3em 2em;
 				text-align: center;
-				border: 1px solid $gold; 
+				border: 1px solid $accommodations-heading-text; 
+				border-radius: 5px;
 
 				div.accommodations-POIitem {
 					margin: 2em 0;
@@ -453,15 +500,11 @@ main {
 					}
 
 					h3.selected {
-						color: $white;
+						color: $accommodations-heading-text;
 					}
 
 					h3:hover {
-						color: $white;
-					}
-
-					p {
-						color: $white;
+						color: $accommodations-heading-text;
 					}
 				}
 			}
@@ -474,58 +517,48 @@ main {
 		@include justify-content(center);
 		@include flex-align-items(center);
 
-		height: 100%;
-		background-color: $white;
+		padding: 4em 2em;
+		height: auto;
+		background-color: $rsvp-background;
 		text-align: center;
 
-		div.rsvp-card {
+		div#rsvp-card {
 			@include flex-display;
 			@include flex-direction-column;
-			
-			max-width: 600px;
-			text-align: center;
+			@include justify-content(center);
+			@include flex-align-items(center);
 
-			div.rsvp-border {
-				padding: 2em 0;
-			}
+			@include transition(all, 500ms, ease);
 
-			form {
-				padding: 2em 0;
+			cursor: pointer;
+			padding: 4em;
+			height: 200px;
+			border: 1px solid $rsvp-heading-text;
+			border-radius: 5px;
 
-				input[type="text"] {
-
-					@include placeholder {
-						color: $gold;
-						font-weight: 100;
-					}
-					margin: 0.5em 0;
-					padding: 0.5em;
-					width: 100%;
-					font-size: 1em;
-
-					background-color: $black;
-					border: none;
-					border-bottom: 1px solid $gold;
+			div.rsvp-headline {
+				h1, h2 {
+					color: $rsvp-heading-text;
 				}
-
-				div#rsvp-submit-btn {
-					margin: 0 auto;
-					margin-top: 1.5em;
-					padding: 1em 0.5em;
-					width: 300px;
-
-					background-color: $gold;
-					color: $black;
-					font-size: 1em;
-					font-weight: 700;
-					border-radius: 5px;
-					border: 1px solid $light-gold;
-				}
-
-				input:focus {
-					outline: none;
+				h1 {
+					margin-bottom: 0.5em;
 				}
 			}
 		}
+		div#rsvp-card.hovered-over {
+			background-color: $rsvp-heading-text;
+			
+			div.rsvp-headline {
+				h1, h2 {
+					color: $rsvp-background;
+				}
+			}
+		}
+	}
+
+	section#footer {
+		padding: 1em;
+		height: auto;
+		text-align: center;
 	}
 }

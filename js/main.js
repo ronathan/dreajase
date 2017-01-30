@@ -87,7 +87,7 @@ $(function() {
 		var $this = $(this);
 		var section = $this.attr('data-section');
 		$('body').stop().animate(
-		{ scrollTop : ( $('#' + section).offset().top + 'px' ) }, 
+		{ scrollTop : ( ($('#' + section).offset().top - 36)+ 'px' ) }, 
 		650, 
 		'easeInOutExpo');
 	});
@@ -109,5 +109,22 @@ $(function() {
 		// Change background color
 		$('section#event-details').removeClass();
 		$('section#event-details').addClass(eventDetails);
+
+		// Change event-details underline image
+		$('div.event-details-header img').removeClass();
+		$('div.event-details-header img').addClass('hidden');
+		$('img#event-details-underline-' + eventDetails).removeClass('hidden');
+		$('img#event-details-underline-' + eventDetails).addClass('animated fadeIn');
+
+	});
+
+	$('section#rsvp div#rsvp-card').hover(function(){
+		$(this).addClass("hovered-over");
+	}, function() {
+		$(this).removeClass("hovered-over");
+	});
+
+	$('section#rsvp div#rsvp-card').click(function() {
+		window.open("https://dreajase.rsvpify.com", '_blank');
 	});
 });

@@ -32,7 +32,12 @@ $event-details-breakdown1: 907px;
 				margin: 0;
 				height: 300px;
 				width: 70%;
-				border: 1px solid $gold;
+				border: 1px solid $border-color;
+				border-radius: 5px;
+
+				div.couple-image {
+					border-radius: 5px;
+				}
 			}
 
 			div.couple-desc {
@@ -83,10 +88,21 @@ $event-details-breakdown1: 907px;
 
 						div.event-details-timeline-time {
 							border-right: none;
-							border-bottom: 1px solid $gold;
+							border-bottom: 1px solid $event-hindu-heading-text;
 						}
-						div.event-details-timeline-details {
+					}
+				}
+			}
+		}
 
+		section#event-details.christian {
+			div.event-details-item {
+				div.event-details-timeline {
+					div.event-details-timeline-section {
+
+						div.event-details-timeline-time {
+							border-right: none;
+							border-bottom: 1px solid $event-christian-heading-text;
 						}
 					}
 				}

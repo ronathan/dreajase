@@ -14,7 +14,10 @@
       margin: 0;
       height: 300px;
       width: 70%;
-      border: 1px solid #F3C078; }
+      border: 1px solid #F6F5F6;
+      border-radius: 5px; }
+      main section#couple div.couple-image-container div.couple-image {
+        border-radius: 5px; }
     main section#couple div.couple-desc {
       margin: 2em 0;
       width: 70%; }
@@ -33,6 +36,9 @@
     text-align: center; }
     main section#event-details div.event-details-item div.event-details-timeline div.event-details-timeline-section div.event-details-timeline-time {
       border-right: none;
-      border-bottom: 1px solid #F3C078; } }
+      border-bottom: 1px solid #33658A; }
+  main section#event-details.christian div.event-details-item div.event-details-timeline div.event-details-timeline-section div.event-details-timeline-time {
+    border-right: none;
+    border-bottom: 1px solid #F5CB90; } }
 
 /*# sourceMappingURL=mediaqueries.css.map */

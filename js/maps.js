@@ -70,7 +70,7 @@ $(function() {
           var mapsLink = "http://maps.google.com/?q=" + item.address;
           infoWindow.setContent(
             '<a href=' + '"' + mapsLink + '"' + 
-            'style="font-weight: normal; color: #F3C078;" target="_blank;">' + 
+            'style="font-weight: normal; color: #DB5461;" target="_blank;">' + 
             item.info + '</a><div style="font-size: 12px; color: #030301;">' + 
             item.address + '</div>'
           );
