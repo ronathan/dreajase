@@ -214,7 +214,7 @@ main {
 		@include flex-align-content(center);
 		
 		padding: 0;
-		background-color: $couple-background;
+		background-color: $white;
 
 		p {
 			color: $couple-text;
@@ -224,8 +224,8 @@ main {
 			height: 100%;
 			margin: 0 3em;
 			width: 450px;
-			border-left: 1px solid $border-color;
-			border-right: 1px solid $border-color;
+			border-left: 1px solid $couple-heading-text;
+			border-right: 1px solid $couple-heading-text;
 
 			div.couple-image {
 				height: 100%;
@@ -400,14 +400,13 @@ main {
 		}
 	}
 	section#event-details.hindu {
-		background-color: $event-hindu-background;
+		background-color: $white;
 
 		h1 {
 			color: $event-hindu-heading-text;
 		}
 	}
 	section#event-details.christian {
-		background-color: $off-white;
 		
 		h1 {
 			color: $event-christian-heading-text;
@@ -449,7 +448,7 @@ main {
 		padding: 4em 0;
 		height: auto;
 
-		background-color: $accommodations-background;
+		background-color: $white;
 
 		div.accommodations-header {
 
@@ -519,7 +518,7 @@ main {
 
 		padding: 4em 2em;
 		height: auto;
-		background-color: $rsvp-background;
+		background-color: $white;
 		text-align: center;
 
 		div#rsvp-card {
@@ -533,12 +532,12 @@ main {
 			cursor: pointer;
 			padding: 4em;
 			height: 200px;
-			border: 1px solid $rsvp-heading-text;
+			border: 1px solid $rsvp-background;
 			border-radius: 5px;
 
 			div.rsvp-headline {
 				h1, h2 {
-					color: $rsvp-heading-text;
+					color: $rsvp-background;
 				}
 				h1 {
 					margin-bottom: 0.5em;
@@ -546,11 +545,11 @@ main {
 			}
 		}
 		div#rsvp-card.hovered-over {
-			background-color: $rsvp-heading-text;
+			background-color: $rsvp-background;
 			
 			div.rsvp-headline {
 				h1, h2 {
-					color: $rsvp-background;
+					color: $rsvp-heading-text;
 				}
 			}
 		}

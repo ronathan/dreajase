@@ -65,7 +65,7 @@ body {
   height: 36px;
   width: 100%;
   background-color: #FFFFFF;
-  border-bottom: 1px solid #F6F5F6; }
+  border-bottom: 1px solid #E0E0E0; }
   #navbar .navbar-item {
     position: relative;
     margin: 0 2em;
@@ -109,7 +109,7 @@ main {
     padding: 4em 1em;
     height: 100%;
     width: 100%;
-    border-bottom: 1px solid #F6F5F6; }
+    border-bottom: 1px solid #E0E0E0; }
   main section.extra-margin {
     margin-top: 50px; }
   main section#landing {
@@ -119,8 +119,8 @@ main {
       width: 100%;
       padding: 30px 0;
       background-color: #FCF3E6;
-      border-top: 1px solid #F6F5F6;
-      border-bottom: 1px solid #F6F5F6; }
+      border-top: 1px solid #E0E0E0;
+      border-bottom: 1px solid #E0E0E0; }
       main section#landing div.landing-gold-background div#landing-image {
         height: 100%;
         width: 100%;
@@ -128,8 +128,8 @@ main {
         background-position: bottom center;
         background-repeat: no-repeat;
         background-image: url("../images/landing-image.jpg");
-        border-top: 1px solid #F6F5F6;
-        border-bottom: 1px solid #F6F5F6; }
+        border-top: 1px solid #E0E0E0;
+        border-bottom: 1px solid #E0E0E0; }
         main section#landing div.landing-gold-background div#landing-image div.gold-mask {
           display: -webkit-box;
           display: -moz-box;
@@ -223,15 +223,15 @@ main {
     -ms-flex-align-content: center;
     align-content: center;
     padding: 0;
-    background-color: #DEC5E3; }
+    background-color: #FFFFFF; }
     main section#couple p {
       color: #0F1108; }
     main section#couple div.couple-image-container {
       height: 100%;
       margin: 0 3em;
       width: 450px;
-      border-left: 1px solid #F6F5F6;
-      border-right: 1px solid #F6F5F6; }
+      border-left: 1px solid #832161;
+      border-right: 1px solid #832161; }
       main section#couple div.couple-image-container div.couple-image {
         height: 100%;
         background-size: cover;
@@ -475,21 +475,19 @@ main {
         width: 50px;
         height: auto; }
   main section#event-details.hindu {
-    background-color: #B6DCFE; }
+    background-color: #FFFFFF; }
     main section#event-details.hindu h1 {
       color: #33658A; }
-  main section#event-details.christian {
-    background-color: #F9F8F8; }
-    main section#event-details.christian h1 {
+  main section#event-details.christian h1 {
+    color: #F5CB90; }
+  main section#event-details.christian div.event-details-menu div.event-details-menu-item h3:hover {
+    color: #F5CB90; }
+  main section#event-details.christian div.event-details-menu div.event-details-menu-item.selected {
+    border-bottom: 1px solid #F5CB90; }
+    main section#event-details.christian div.event-details-menu div.event-details-menu-item.selected h3 {
       color: #F5CB90; }
-    main section#event-details.christian div.event-details-menu div.event-details-menu-item h3:hover {
-      color: #F5CB90; }
-    main section#event-details.christian div.event-details-menu div.event-details-menu-item.selected {
-      border-bottom: 1px solid #F5CB90; }
-      main section#event-details.christian div.event-details-menu div.event-details-menu-item.selected h3 {
-        color: #F5CB90; }
-    main section#event-details.christian div.event-details-item div.event-details-timeline div.event-details-timeline-section div.event-details-timeline-time {
-      border-right: 1px solid #F5CB90; }
+  main section#event-details.christian div.event-details-item div.event-details-timeline div.event-details-timeline-section div.event-details-timeline-time {
+    border-right: 1px solid #F5CB90; }
   main section#accommodations {
     display: -webkit-box;
     display: -moz-box;
@@ -503,7 +501,7 @@ main {
     flex-direction: column;
     padding: 4em 0;
     height: auto;
-    background-color: #F3B1B5; }
+    background-color: #FFFFFF; }
     main section#accommodations div.accommodations-header {
       text-align: center; }
       main section#accommodations div.accommodations-header h1, main section#accommodations div.accommodations-header h2 {
@@ -588,7 +586,7 @@ main {
     align-items: center;
     padding: 4em 2em;
     height: auto;
-    background-color: #3A405A;
+    background-color: #FFFFFF;
     text-align: center; }
     main section#rsvp div#rsvp-card {
       display: -webkit-box;
@@ -617,16 +615,16 @@ main {
       cursor: pointer;
       padding: 4em;
       height: 200px;
-      border: 1px solid #FFFFFF;
+      border: 1px solid #3A405A;
       border-radius: 5px; }
       main section#rsvp div#rsvp-card div.rsvp-headline h1, main section#rsvp div#rsvp-card div.rsvp-headline h2 {
-        color: #FFFFFF; }
+        color: #3A405A; }
       main section#rsvp div#rsvp-card div.rsvp-headline h1 {
         margin-bottom: 0.5em; }
     main section#rsvp div#rsvp-card.hovered-over {
-      background-color: #FFFFFF; }
+      background-color: #3A405A; }
       main section#rsvp div#rsvp-card.hovered-over div.rsvp-headline h1, main section#rsvp div#rsvp-card.hovered-over div.rsvp-headline h2 {
-        color: #3A405A; }
+        color: #FFFFFF; }
   main section#footer {
     padding: 1em;
     height: auto;
