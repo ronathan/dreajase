@@ -16,6 +16,7 @@ $(function() {
 	var hasDrawnAnimationsForCouple = false;
 	var hasDrawnAnimationsForEventDetails = false;
 	var hasDrawnAnimationsForAccommodations = false;
+	var hasDrawnAnimationsForRSVP = false;
 
 	// Scroll Tracking
 	var s = skrollr.init({ 
@@ -44,11 +45,11 @@ $(function() {
 			if(data.curTop >= (sectionCoupleOffset - 400) && !hasDrawnAnimationsForCouple) {
 				
 				hasDrawnAnimationsForCouple = true;
-				$('div.couple-image-container').addClass('animated fadeIn');
+				$('div.couple-image-container').addClass('animated fadeInUp');
 				$('div.couple-header').addClass('animated fadeInRight');
 				$('div.couple-address').addClass('animated fadeInRight');
 				$('div.couple-desc-writeup').addClass('animated fadeInRight');
-				$('div.couple-signature').addClass('animated fadeIn');
+				$('div.couple-signature').addClass('animated fadeInUp');
 			}
 
 
@@ -56,8 +57,8 @@ $(function() {
 			if(data.curTop >= (sectionEventDetailsOffset - 400) && !hasDrawnAnimationsForEventDetails) {
 
 				hasDrawnAnimationsForEventDetails = true;
-				$('div.event-details-header').addClass('animated fadeIn');
-				$('div.event-details-menu').addClass('animated fadeIn');
+				$('div.event-details-header').addClass('animated fadeInUp');
+				$('div.event-details-menu').addClass('animated fadeInUp');
 				$('div.event-details-venue').addClass('animated fadeInUp');
 				$('div.event-details-timeline-section').addClass('animated fadeInUp');
 			}
@@ -65,9 +66,16 @@ $(function() {
 			if(data.curTop >= (accommodationsOffset - 400) && !hasDrawnAnimationsForAccommodations) {
 
 				hasDrawnAnimationsForAccommodations = true;
-				$('.accommodations-header').addClass('animated fadeIn');
+				$('.accommodations-header').addClass('animated fadeInUp');
 				$('#accommodations-POI').addClass('animated fadeInLeft');
 				$('#accommodations-map-canvas').addClass('animated fadeInRight');
+			}
+
+			if(data.curTop >= (accommodationsOffset) && !hasDrawnAnimationsForRSVP) {
+
+				hasDrawnAnimationsForRSVP = true;
+				$('.rsvp-header').addClass('animated fadeInUp');
+				$('#rsvp-card').addClass('animated fadeInUp');
 			}
 		}
 	});

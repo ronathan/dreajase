@@ -106,7 +106,7 @@ main {
   width: 100%; }
   main section {
     position: relative;
-    padding: 4em 1em;
+    padding: 4em;
     height: 100%;
     width: 100%;
     border-bottom: 1px solid #E0E0E0; }
@@ -385,46 +385,31 @@ main {
         display: -ms-flexbox;
         display: -webkit-flex;
         display: flex;
-        -webkit-box-orient: horizontal;
+        -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-        -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
         -webkit-box-pack: center;
         -webkit-justify-content: center;
         -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-align-items: center;
+        -webkit-align-items: center;
+        -ms-flex-align-items: center;
+        align-items: center;
         opacity: 0;
-        padding: 0 2em;
         height: auto;
-        text-align: left; }
+        width: 100%;
+        max-width: 500px;
+        text-align: center; }
         main section#event-details div.event-details-item div.event-details-timeline div.event-details-timeline-section div.event-details-timeline-time {
-          display: -webkit-box;
-          display: -moz-box;
-          display: -ms-flexbox;
-          display: -webkit-flex;
-          display: flex;
-          -webkit-box-orient: horizontal;
-          -webkit-box-direction: normal;
-          -webkit-flex-direction: row;
-          -ms-flex-direction: row;
-          flex-direction: row;
-          -webkit-box-pack: center;
-          -webkit-justify-content: center;
-          -ms-flex-pack: center;
-          justify-content: center;
-          -webkit-box-align-items: center;
-          -webkit-align-items: center;
-          -ms-flex-align-items: center;
-          align-items: center;
-          padding: 1em 4em;
-          border-right: 1px solid #33658A; }
+          padding: 1em 0;
+          width: 150px;
+          border-bottom: 1px solid #33658A; }
         main section#event-details div.event-details-item div.event-details-timeline div.event-details-timeline-section div.event-details-timeline-details {
-          padding: 1em 4em;
-          max-width: 600px; }
+          padding: 1em 0;
+          text-align: center; }
           main section#event-details div.event-details-item div.event-details-timeline div.event-details-timeline-section div.event-details-timeline-details p {
             margin: 0; }
       main section#event-details div.event-details-item div.event-details-timeline div.event-details-timeline-section:nth-child(0) {
@@ -499,7 +484,6 @@ main {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 4em 0;
     height: auto;
     background-color: #FFFFFF; }
     main section#accommodations div.accommodations-header {
@@ -534,7 +518,8 @@ main {
         -o-animation-delay: 800ms;
         animation-delay: 800ms;
         height: 400px;
-        width: 400px;
+        max-width: 400px;
+        width: 100%;
         margin: 1em;
         border: 1px solid #DB5461;
         border-radius: 5px; }
@@ -571,11 +556,11 @@ main {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -584,10 +569,15 @@ main {
     -webkit-align-items: center;
     -ms-flex-align-items: center;
     align-items: center;
-    padding: 4em 2em;
     height: auto;
     background-color: #FFFFFF;
     text-align: center; }
+    main section#rsvp div.rsvp-header {
+      text-align: center; }
+      main section#rsvp div.rsvp-header h1, main section#rsvp div.rsvp-header h2 {
+        color: #3A405A; }
+      main section#rsvp div.rsvp-header img {
+        margin-top: -0.5em; }
     main section#rsvp div#rsvp-card {
       display: -webkit-box;
       display: -moz-box;
@@ -613,6 +603,7 @@ main {
       -o-transition: all 500ms ease;
       transition: all 500ms ease;
       cursor: pointer;
+      margin-top: 4em;
       padding: 4em;
       height: 200px;
       border: 1px solid #3A405A;

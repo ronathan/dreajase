@@ -90,6 +90,10 @@ $event-details-breakdown1: 907px;
 							border-right: none;
 							border-bottom: 1px solid $event-hindu-heading-text;
 						}
+						div.event-details-timeline-details {
+							width: 100%;
+							max-width: 600px;
+						}
 					}
 				}
 			}

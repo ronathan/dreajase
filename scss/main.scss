@@ -109,7 +109,7 @@ main {
 
 	section {
 		position: relative;
-		padding: 4em 1em;
+		padding: 4em;
 		height: 100%;
 		width: 100%;
 		border-bottom: 1px solid $border-color;
@@ -351,28 +351,25 @@ main {
 
 				div.event-details-timeline-section {
 					@include flex-display;
-					@include flex-direction-row;
-					@include flex-wrap(wrap);
+					@include flex-direction-column;
 					@include justify-content(center);
+					@include flex-align-items(center);
 					opacity: 0;
 
-					padding: 0 2em;
 					height: auto;
-					text-align: left;
+					width: 100%;
+					max-width: 500px;
+					text-align: center;
 
 					div.event-details-timeline-time {
-						@include flex-display;
-						@include flex-direction-row;
-						@include justify-content(center);
-						@include flex-align-items(center);
-
-						padding: 1em 4em;
-						border-right: 1px solid $event-hindu-heading-text;
+						padding: 1em 0;
+						width: 150px;
+						border-bottom: 1px solid $event-hindu-heading-text;
 					}
 
 					div.event-details-timeline-details {
-						padding: 1em 4em;
-						max-width: 600px;
+						padding: 1em 0;
+						text-align: center;
 
 						p {
 							margin: 0;
@@ -445,7 +442,6 @@ main {
 		@include flex-display;
 		@include flex-direction-column;
 
-		padding: 4em 0;
 		height: auto;
 
 		background-color: $white;
@@ -474,7 +470,8 @@ main {
 			div#accommodations-map-canvas {
 				@include animation-delay(800ms); 
 				height: 400px;
-				width: 400px;
+				max-width: 400px;
+				width: 100%;
 				margin: 1em;
 				border: 1px solid $accommodations-heading-text; 
 				border-radius: 5px;
@@ -512,14 +509,25 @@ main {
 
 	section#rsvp {
 		@include flex-display;
-		@include flex-direction-row;
+		@include flex-direction-column;
 		@include justify-content(center);
 		@include flex-align-items(center);
 
-		padding: 4em 2em;
 		height: auto;
 		background-color: $white;
 		text-align: center;
+
+		div.rsvp-header {
+			text-align: center;
+
+			h1,h2 {
+				color: $rsvp-background;
+			}
+			
+			img {
+				margin-top: -0.5em;
+			}
+		}
 
 		div#rsvp-card {
 			@include flex-display;
@@ -530,6 +538,7 @@ main {
 			@include transition(all, 500ms, ease);
 
 			cursor: pointer;
+			margin-top: 4em;
 			padding: 4em;
 			height: 200px;
 			border: 1px solid $rsvp-background;
