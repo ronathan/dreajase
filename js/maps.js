@@ -70,7 +70,7 @@ $(function() {
           var mapsLink = "http://maps.google.com/?q=" + item.address;
           infoWindow.setContent(
             '<a href=' + '"' + mapsLink + '"' + 
-            'style="font-weight: normal; color: #DB5461;" target="_blank;">' + 
+            'style="font-weight: normal; color: #F5CB90;" target="_blank;">' + 
             item.info + '</a><div style="font-size: 12px; color: #030301;">' + 
             item.address + '</div>'
           );
@@ -104,7 +104,7 @@ $(function() {
 
   google.maps.event.addDomListener(window, 'load', initialize);
 
-  var $mapLink = $(".accommodations-POIitem h3");
+  var $mapLink = $("#accommodations-POI-points .accommodations-content p");
 
   // Add / Remove items by clicking them
   $mapLink.click(function() { 
@@ -114,6 +114,9 @@ $(function() {
         $this.toggleClass("selected");
 
         switch($this.attr('data-marker')) {
+            case "hotel":
+              addOrRemoveMarkerToMap(hotel);
+              break;
             case "hindu":
               addOrRemoveMarkerToMap(hinduWedding);
               break;

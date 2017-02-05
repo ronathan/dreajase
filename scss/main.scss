@@ -35,7 +35,7 @@ p {
 	font-weight: 100;
 }
 body {
-	font-size: 12px;
+	font-size: 14px;
 	font-family: Helvetica;
 	height: 100%;
 	width: 100%;
@@ -68,7 +68,7 @@ body {
 		p {
 			margin: 0;
 			font-family: 'Ovo', serif;
-			color: $black;
+			color: $body-text;
 			font-size: 1em;
 			font-weight: 300;
 
@@ -82,6 +82,7 @@ body {
 .navbar-fixed {
 	position: fixed !important;
 	top: 0px;
+	border-top: 1px solid $border-color;
 }
 
 // General Path Animations
@@ -163,7 +164,7 @@ main {
 						text-align: center;
 
 						h1 {
-							color: $off-white;
+							color: $landing-page-header-text;
 						}
 						p {
 							margin: 0.5em;
@@ -190,13 +191,13 @@ main {
 			border: 1px solid $landing-page-headline-border;
 			border-radius: 5px;
 			height: 230px;
-			width: 200px;
+			width: 220px;
 
 			text-align: center;
 
 			h1 {
 				margin-top: 20px;
-				color: $off-white;
+				color: $landing-page-header-text;
 			}
 			p {
 				font-size: 1.35em;
@@ -216,28 +217,24 @@ main {
 		padding: 0;
 		background-color: $white;
 
-		p {
-			color: $couple-text;
-		}
-
 		div.couple-image-container {
 			height: 100%;
 			margin: 0 3em;
 			width: 450px;
-			border-left: 1px solid $couple-heading-text;
-			border-right: 1px solid $couple-heading-text;
+			border-left: 1px solid $border-color;
+			border-right: 1px solid $border-color;
 
 			div.couple-image {
 				height: 100%;
 				background-size: cover;
 				background-position: bottom center;
 				background-repeat: no-repeat;
-				background-image: url('../images/thecouple3-2.jpeg');
+				background-image: url('../images/thecouple3-2.jpg');
 
 				div.gold-mask {
 					width:100%;
 			  		height:100%;
-			  		background-color:rgba(249, 248, 248, 0.1);
+			  		background-color:rgba(243, 192, 120, 0.2);
 			  		color: $gold;
 				}
 			}
@@ -312,6 +309,7 @@ main {
 				padding: 12px 24px;
 				cursor: pointer;
 				h3 {
+					font-weight: 900;
 					@include transition(all, 500ms, ease);
 				}
 				h3:hover {
@@ -431,7 +429,7 @@ main {
 				div.event-details-timeline-section {
 
 					div.event-details-timeline-time {
-						border-right: 1px solid $event-christian-heading-text;
+						border-bottom: 1px solid $event-christian-heading-text;
 					}
 				}
 			}
@@ -465,42 +463,72 @@ main {
 			@include flex-wrap(wrap);
 			@include justify-content(center);
 
+			height: 500px;
 			margin: 3em 0;
 
 			div#accommodations-map-canvas {
 				@include animation-delay(800ms); 
-				height: 400px;
+				height: 100%;
 				max-width: 400px;
 				width: 100%;
-				margin: 1em;
-				border: 1px solid $accommodations-heading-text; 
+				margin-left: 10px;
+				border: 1px solid $border-color; 
 				border-radius: 5px;
 			}
+
 			div#accommodations-POI {
 				@include animation-delay(800ms); 
-				height: 400px;
+				height: 500px;
 				width: 400px;
-				margin: 1em;
-				padding: 3em 2em;
+				margin-right: 10px;
 				text-align: center;
-				border: 1px solid $accommodations-heading-text; 
-				border-radius: 5px;
 
-				div.accommodations-POIitem {
-					margin: 2em 0;
-					text-align: left;
+				h2 {
+					font-weight: 900;
+					color: $accommodations-heading-text;
+				}
 
-					h3 {
-						cursor: pointer;
+				div#accommodations-POI-hotel {
+					@include flex-display;
+					@include flex-direction-column;
+					@include justify-content(center);
+					@include flex-align-items(center);
+
+					height: 260px;
+					border: 1px solid $border-color;
+					border-radius: 5px;
+					padding: 3em 2em;
+				}
+				div#accommodations-POI-points {
+					@include flex-display;
+					@include flex-direction-column;
+					@include justify-content(center);
+					@include flex-align-items(center);
+
+					height: 220px;
+					border: 1px solid $border-color;
+					border-radius: 5px;
+					padding: 3em 2em;
+					margin-top: 20px;
+					p {
 						@include transition(all, 500ms, ease);
+						cursor: pointer;
 					}
-
-					h3.selected {
-						color: $accommodations-heading-text;
+					p.help-text {
+						cursor: auto;
+						text-decoration: none !important;
+						margin-top: 0px;
 					}
-
-					h3:hover {
-						color: $accommodations-heading-text;
+					p.help-text:hover {
+						text-decoration: none;
+						color: $body-text;
+					}
+					p.selected {
+						text-decoration: underline;
+					}
+					p:hover {
+						color: $border-color;
+						text-decoration: underline;
 					}
 				}
 			}
@@ -508,11 +536,6 @@ main {
 	}
 
 	section#rsvp {
-		@include flex-display;
-		@include flex-direction-column;
-		@include justify-content(center);
-		@include flex-align-items(center);
-
 		height: auto;
 		background-color: $white;
 		text-align: center;
@@ -521,7 +544,7 @@ main {
 			text-align: center;
 
 			h1,h2 {
-				color: $rsvp-background;
+				color: $rsvp-heading-text;
 			}
 			
 			img {
@@ -529,44 +552,91 @@ main {
 			}
 		}
 
-		div#rsvp-card {
+		div.rsvp-container {
 			@include flex-display;
 			@include flex-direction-column;
 			@include justify-content(center);
 			@include flex-align-items(center);
-
-			@include transition(all, 500ms, ease);
-
-			cursor: pointer;
+			
+			height: auto;
 			margin-top: 4em;
-			padding: 4em;
-			height: 200px;
-			border: 1px solid $rsvp-background;
-			border-radius: 5px;
 
-			div.rsvp-headline {
-				h1, h2 {
-					color: $rsvp-background;
-				}
-				h1 {
-					margin-bottom: 0.5em;
+			div#rsvp-card {
+				@include flex-display;
+				@include flex-direction-column;
+				@include justify-content(center);
+				@include flex-align-items(center);
+
+				@include transition(all, 500ms, ease);
+
+				cursor: pointer;
+				padding: 4em;
+				height: 200px;
+				width: 450px;
+				border: 1px solid $rsvp-heading-text;
+				border-radius: 5px;
+
+				div.rsvp-headline {
+					h1, h2 {
+						color: $rsvp-heading-text;
+					}
+					h1 {
+						margin-bottom: 0.5em;
+					}
 				}
 			}
-		}
-		div#rsvp-card.hovered-over {
-			background-color: $rsvp-background;
-			
-			div.rsvp-headline {
-				h1, h2 {
-					color: $rsvp-heading-text;
+			div#rsvp-card.hovered-over {
+				background-color: $rsvp-heading-text;
+				
+				div.rsvp-headline {
+					h1, h2 {
+						color: $white;
+					}
 				}
 			}
 		}
 	}
 
-	section#footer {
-		padding: 1em;
+	section#goodbye {
+		@include flex-display;
+		@include flex-direction-column;
+		@include flex-align-items(center);
+
 		height: auto;
 		text-align: center;
+
+		div#goodbye-image {
+			background-image:url('../images/rsvp-image.jpg');
+			background-size: cover;
+			background-position: center bottom;
+			height: 500px;
+			width: 450px;
+			border: 1px solid $border-color;
+			border-radius: 5px;
+			
+			div.gold-mask {
+				width:100%;
+		  		height:100%;
+		  		background-color:rgba(243, 192, 120, 0.2);
+			}
+		}
+
+		div#goodbye-text {
+
+			margin-top: 2em;
+			h1 {
+				color: $accommodations-heading-text;
+			}
+		}
+	}
+
+	section#footer {
+		height: auto;
+		padding: 0.5em;
+		text-align: center;
+		p {
+			margin: 0;
+			font-style: italic;
+		}
 	}
 }

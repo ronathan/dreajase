@@ -126,6 +126,12 @@ $(function() {
 
 	});
 
+	$('.event-details-menu-item').hover(function(){
+		$(this).addClass("hovered-over");
+	}, function() {
+		$(this).removeClass("hovered-over");
+	});
+
 	$('section#rsvp div#rsvp-card').hover(function(){
 		$(this).addClass("hovered-over");
 	}, function() {
