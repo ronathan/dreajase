@@ -14,7 +14,7 @@ h1 {
 
 h2 {
   font-family: 'Ovo', serif, 'Baskerville';
-  font-size: 1.35em;
+  font-size: 1.25em;
   font-weight: 300;
   margin: 0;
   color: #191716; }
@@ -237,7 +237,7 @@ main {
       main section#couple div.couple-image-container div.couple-image {
         height: 100%;
         background-size: cover;
-        background-position: bottom center;
+        background-position: center center;
         background-repeat: no-repeat;
         background-image: url("../images/thecouple4.jpg"); }
         main section#couple div.couple-image-container div.couple-image div.gold-mask {
@@ -464,7 +464,7 @@ main {
         animation-delay: 2600ms; }
     main section#event-details div.event-details-item div.event-details-monetary-footer {
       margin: 5em 0; }
-      main section#event-details div.event-details-item div.event-details-monetary-footer h3 {
+      main section#event-details div.event-details-item div.event-details-monetary-footer p {
         font-style: italic; }
   main section#event-details.hindu {
     background-color: #FFFFFF; }

@@ -16,7 +16,7 @@ h1 {
 }
 h2 {
 	font-family: 'Ovo', serif, 'Baskerville';
-	font-size: 1.35em;
+	font-size: 1.25em;
 	font-weight: 300;
 	margin: 0;
 	color: $heading-text-color;
@@ -230,7 +230,7 @@ main {
 			div.couple-image {
 				height: 100%;
 				background-size: cover;
-				background-position: bottom center;
+				background-position: center center;
 				background-repeat: no-repeat;
 				background-image: url('../images/thecouple4.jpg');
 
@@ -392,7 +392,7 @@ main {
 
 			div.event-details-monetary-footer {
 				margin: 5em 0;
-				h3 {
+				p {
 					font-style: italic;
 				}
 			}
