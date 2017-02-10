@@ -465,6 +465,7 @@ main {
     main section#event-details div.event-details-item div.event-details-monetary-footer {
       margin: 5em 0; }
       main section#event-details div.event-details-item div.event-details-monetary-footer p {
+        font-size: 0.6em;
         font-style: italic; }
   main section#event-details.hindu {
     background-color: #FFFFFF; }

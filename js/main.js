@@ -47,7 +47,7 @@ $(function() {
 				hasDrawnAnimationsForCouple = true;
 				$('div.couple-image-container').addClass('animated fadeIn');
 				$('div.couple-header').addClass('animated fadeInRight');
-				$('div.couple-address').addClass('animated fadeInRight');
+				// $('div.couple-address').addClass('animated fadeInRight');
 				$('div.couple-desc-writeup').addClass('animated fadeInRight');
 				$('div.couple-signature').addClass('animated fadeInUp');
 			}

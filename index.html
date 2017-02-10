@@ -1,43 +1,379 @@
 <html>
 <head>
+	<meta name="viewport" content="initial-scale=1">
 	<title>Andrea & Jason's Wedding</title>
-	<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Open+Sans:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Ovo" rel="stylesheet">
 	<!-- <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script|Roboto:100|Open+Sans" rel="stylesheet"> -->
+	<link rel="icon" href="images/wedding-logo.png"/>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen"/>
 	<link rel="stylesheet" type="text/css" href="css/icomoon.css" media="screen"/>
 	<link rel="stylesheet" type="text/css" href="css/animate.css" media="screen"/>
 	<link rel="stylesheet" type="text/css" href="css/main.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/mediaqueries.css" media="screen"/>
 </head>
 
 <body>
 
-<div class="container">
+<main id="skrollr-body">
+	<section id="landing">
+		
+		<div class="landing-gold-background">
+			<div id="landing-image">
+				<div class="gold-mask"></div>
+			</div>
+		</div>
 
-	<main>
-		<section id="landing">
+		<div class="landing-page-headline animated fadeIn">
+			<h1>Andrea<br/>&<br/>Jason</h1><br/>
+			<p>June 2 & 3, 2017</p>
+		</div>
+	</section>
+
+	<!-- Navbar is placed after landing page for sticky effect -->
+	<div id="navbar">
+		<div class="navbar-item" data-section="event-details">
+			<p>Event Details</p>
+		</div>
+		<div class="navbar-item" data-section="accommodations">
+			<p>Accommodations</p>
+		</div>
+		<div id="navbar-item-rsvp" class="navbar-item" data-section="rsvp">
+			<p>RSVP</p>
+		</div>
+	</div>
+
+	<section id="couple">
+		
+		<div class="couple-image-container hidden">
+			<div class="couple-image">
+				<div class="gold-mask">
+				</div>
+			</div>
+		</div>
+
+		<div class="couple-desc">
+
+			<div class="couple-header hidden">
+				<h1>To our dear friends and family,</h1>
+			</div>
+
+<!-- 			<div class="couple-address hidden">
+				<h1>To our dear friends and family,</h1>
+			</div> -->
 			
-			<div class="landing-gold-background">
-				<div id="landing-image">
-					<div class="gold-mask">
-						<div class="landing-page-headline2 animated fadeIn">
-							<p>June 2 & 3, 2017</p>
-							<h1>dreajase.com</h1>
-							<p>Coming soon...</p>
-						</div>
+			<div class="couple-desc-writeup hidden">
+				<p>
+					We are so excited to have you join us in the celebration of our marriage this June. It was almost 10 years ago, that we locked eyes for a brief moment in a UofT cafeteria and noticed each other for the first time. According to Jason, Andrea spotted him first. According to the truth, it was him that got caught looking. While neither of us thought then that that moment would lead to a wedding and starting a life together in New York, we both agree now that we wouldn’t have it any other way.
+				</p>
+				<p>
+					There’s nothing we want more than to be surrounded by our favorite people on our special day.  We invite to you share in our joy as we become Mr and Mrs, and thank you for the support, guidance, friendship, and love that you’ve shown us throughout the years. 
+				</p>
+				<p>
+					We hope you will be there, and can’t wait to see you. 
+				</p>
+			</div>
+			<div class="couple-signature hidden">
+				<h1>Love,<br/>Andrea & Jason</h1>
+			</div>
+		</div>
+	</section>
+
+	<section id="event-details" class="hindu">
+		<div class="event-details-header hidden">
+			<h1>Event Details</h1>
+			<br/>
+			<img class="header-underline" id="event-details-underline-hindu" 
+				src="images/event-details-underline-hindu.svg"/>
+			<img class="header-underline hidden"
+				id="event-details-underline-christian"
+				src="images/event-details-underline-christian.svg"/>
+		</div>
+		
+		<div class="event-details-menu hidden">
+
+			<div class="event-details-menu-item selected"
+				data-eventdetails="hindu">
+				<h3>Friday June 2, 2017</h3>
+			</div>
+
+			<div class="event-details-menu-item"
+				data-eventdetails="christian">
+				<h3>Saturday June 3, 2017</h3>
+			</div>
+
+		</div>
+
+		<div id="event-details-item-hindu" class="event-details-item hindu">
+		
+			<div id="event-details-venue-hindu" class="event-details-venue hidden">
+				<h3>The Hindu Wedding Ceremony, cocktail hour and reception will be held at</h3>
+				<h1>Millennium Gardens Banquet Centre</h1>
+				<h3>
+					20 Polonia Ave, #100<br/>
+					Brampton, ON<br/>
+					L6Y 0K7
+				</h3>
+			</div>
+
+			<div class="event-details-timeline">
+				
+				<div class="event-details-timeline-section">
+					
+					<div class="event-details-timeline-time">
+						<h3>5:00 P.M</h3>
+					</div>
+
+					<div class="event-details-timeline-details">
+						<p>
+							Andrea arrives at Millennium Gardens<br/>
+							Appetizers & Refreshments are served in the lobby
+						</p>
+					</div>
+				</div>
+
+				<div class="event-details-timeline-section">
+					
+					<div class="event-details-timeline-time">
+						<h3>5:15 P.M</h3>
+					</div>
+
+					<div class="event-details-timeline-details">
+						<p>
+							Jason arrives at Millennium Gardens and is greeted by friends and family
+						</p>
+					</div>
+				</div>
+
+				<div class="event-details-timeline-section">
+					
+					<div class="event-details-timeline-time">
+						<h3>5:30 P.M</h3>
+					</div>
+
+					<div class="event-details-timeline-details">
+						<p>
+							Jason enters the hall and Prepares for the Ceremony
+						</p>
+					</div>
+				</div>
+
+				<div class="event-details-timeline-section">
+					
+					<div class="event-details-timeline-time">
+						<h3>6:00 P.M</h3>
+					</div>
+
+					<div class="event-details-timeline-details">
+						<p>
+							Andrea enters the hall and the Hindu Wedding Ceremony begins
+						</p>
+					</div>
+				</div>
+
+				<div class="event-details-timeline-section">
+					
+					<div class="event-details-timeline-time">
+						<h3>7:00 P.M</h3>
+					</div>
+
+					<div class="event-details-timeline-details">
+						<p>
+							Wedding Ceremony Finishes<br/>
+						</p>
+					</div>
+				</div>
+
+				<div class="event-details-timeline-section">
+					
+					<div class="event-details-timeline-time">
+						<h3>7:30 P.M</h3>
+					</div>
+
+					<div class="event-details-timeline-details">
+						<p>
+							Dinner is served<br/>
+							Celebrations begin
+						</p>
 					</div>
 				</div>
 			</div>
 
+			<div class="event-details-monetary-footer">
+				<p>Monetary Gifts Preferred</p>
+			</div>
+		</div>
 
-		</section>
+		<div id="event-details-item-christian" class="event-details-item christian">
+			<div class="event-details-venue">
+				<h3>The Christian Wedding Ceremony, cocktail hour and reception will be held at</h3>
+				<h1>The Greenhouse at the Royal Ambassador</h1>
+				<h3>
+					15430 Innis Lake Road<br/>
+					Calendon East, ON<br/> 
+					L7C 2Z1
+				</h3>
+			</div>
 
-	</main>
-</div>
+			<div class="event-details-timeline">
+				
+				<div class="event-details-timeline-section">
+					
+					<div class="event-details-timeline-time">
+						<h3>5:15 P.M</h3>
+					</div>
+
+					<div class="event-details-timeline-details">
+						<p>
+							Ceremony Begins at the Lake Gazebo
+						</p>
+					</div>
+				</div>
+
+				<div class="event-details-timeline-section">
+					
+					<div class="event-details-timeline-time">
+						<h3>6:00 P.M</h3>
+					</div>
+
+					<div class="event-details-timeline-details">
+						<p>
+							Wedding Ceremony Finishes<br/>
+							Guests pictures with Bride and Groom<br/>
+							Cocktails and Appetizers are served near The Greenhouse
+						</p>
+					</div>
+				</div>
+
+				<div class="event-details-timeline-section">
+					
+					<div class="event-details-timeline-time">
+						<h3>7:30PM</h3>
+					</div>
+
+					<div class="event-details-timeline-details">
+						<p>
+							Dinner is served
+						</p>
+					</div>
+				</div>
+
+				<div class="event-details-timeline-section">
+					
+					<div class="event-details-timeline-time">
+						<h3>9:00 P.M</h3>
+					</div>
+
+					<div class="event-details-timeline-details">
+						<p>
+							Music and Dancing
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="event-details-monetary-footer">
+				<p>Monetary Gifts Preferred</p>
+			</div>
+		</div>
+
+	</section>
+
+
+	<section id="accommodations">
+
+		<div class="accommodations-header hidden">
+			<h1>Accommodations</h1>
+			<br/>
+			<img class="header-underline" src="images/event-details-underline-accommodations.svg"/>
+		</div>
+
+		<div id="accommodations-container">
+
+			<div id="accommodations-POI" class="hidden">
+
+				<div id="accommodations-POI-hotel">
+					<div class="accommodations-content">
+						<h2>HOTEL</h2>
+						<p>
+							If you need somewhere to stay, we have reserved a block of rooms at:
+						</p>
+						<p>
+							<strong>The Courtyard Marriot</strong><br/> 
+							90 Biscayne Crescent <br/>
+							Brampton, ON L6W 4S1, Canada  <br/>
+							Tel: +1 905-455-9000
+						</p>
+						<p>
+							2 Queens / 1 King Rooms are $109 if you book before May
+						</p>
+					</div>
+				</div>
+
+				<div id="accommodations-POI-points">
+					<div class="accommodations-content">
+						<h2>POINTS OF INTEREST</h2>
+						<p class="help-text">(Click to View)</p>
+						<p data-marker="hotel" class="selected">The Hotel - Courtyard Marriott</p>
+						<p data-marker="hindu" >Hindu Wedding Venue - Millennium Gardens</p>
+						<p data-marker="christian">Christian Wedding Venue - Royal Ambassador</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div id="accommodations-map-canvas" class="hidden">
+			</div>
+
+		</div>
+	</section>
+	<!-- <section id="registry">
+	</section> -->
+
+	<section id="rsvp">
+
+		<div class="rsvp-header hidden">
+			<h1>RSVP</h1>
+			<br/>
+			<img class="header-underline" src="images/event-details-underline-rsvp.svg"/>
+		</div>
+		<div class="rsvp-container">
+
+			<div id="rsvp-card" class="hidden">
+				<div class="rsvp-headline">
+					<h1>
+						We would be delighted to have you
+					</h1>
+					<h2>
+						Please click here to RSVP
+					</h2>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section id="goodbye">
+		
+		<div id="goodbye-image">
+			<div class="gold-mask">
+			</div>
+		</div>
+
+		<div id="goodbye-text">
+			<h1>Thank You</h1>
+			<p>We look forward to seeing you there!</p>
+		</div>
+	</section>
+
+	<section id="footer">
+		<div>
+			<p>Made by Ronald Victorino for Jason & Andrea</p>
+		</div>
+	</section>
+</main>
 
 <!-- JS Files -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBckzmRDrJklGDUMydZGkQLpG3175ZETvk=&callback=initMap" async defer>
-</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBckzmRDrJklGDUMydZGkQLpG3175ZETvk"></script>
 <script src="js/jquery.easing.min.js"></script>
 <script src="js/skrollr.js"></script>
 <script src="js/maps.js"></script>
