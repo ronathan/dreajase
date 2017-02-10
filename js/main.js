@@ -45,7 +45,7 @@ $(function() {
 			if(data.curTop >= (sectionCoupleOffset - 400) && !hasDrawnAnimationsForCouple) {
 				
 				hasDrawnAnimationsForCouple = true;
-				$('div.couple-image-container').addClass('animated fadeInUp');
+				$('div.couple-image-container').addClass('animated fadeIn');
 				$('div.couple-header').addClass('animated fadeInRight');
 				$('div.couple-address').addClass('animated fadeInRight');
 				$('div.couple-desc-writeup').addClass('animated fadeInRight');
@@ -61,6 +61,7 @@ $(function() {
 				$('div.event-details-menu').addClass('animated fadeInUp');
 				$('div.event-details-venue').addClass('animated fadeInUp');
 				$('div.event-details-timeline-section').addClass('animated fadeInUp');
+				$('div.event-details-monetary-footer').addClass('animated fadeInUp');
 			}
 
 			if(data.curTop >= (accommodationsOffset - 400) && !hasDrawnAnimationsForAccommodations) {
@@ -119,7 +120,6 @@ $(function() {
 		$('section#event-details').addClass(eventDetails);
 
 		// Change event-details underline image
-		$('div.event-details-header img').removeClass();
 		$('div.event-details-header img').addClass('hidden');
 		$('img#event-details-underline-' + eventDetails).removeClass('hidden');
 		$('img#event-details-underline-' + eventDetails).addClass('animated fadeIn');

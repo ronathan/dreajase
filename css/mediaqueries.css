@@ -43,5 +43,9 @@
   main section#event-details.christian div.event-details-item div.event-details-timeline div.event-details-timeline-section div.event-details-timeline-time {
     border-right: none;
     border-bottom: 1px solid #F5CB90; } }
+@media (max-width: 400px) {
+  main img.header-underline {
+    width: 100%;
+    height: auto; } }
 
 /*# sourceMappingURL=mediaqueries.css.map */

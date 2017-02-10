@@ -41,6 +41,9 @@ body {
 .hidden {
   opacity: 0; }
 
+.display-none {
+  display: none; }
+
 #navbar {
   display: -webkit-box;
   display: -moz-box;
@@ -236,7 +239,7 @@ main {
         background-size: cover;
         background-position: bottom center;
         background-repeat: no-repeat;
-        background-image: url("../images/thecouple3-2.jpg"); }
+        background-image: url("../images/thecouple4.jpg"); }
         main section#couple div.couple-image-container div.couple-image div.gold-mask {
           width: 100%;
           height: 100%;
@@ -325,6 +328,9 @@ main {
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
       -webkit-box-pack: center;
       -webkit-justify-content: center;
       -ms-flex-pack: center;
@@ -336,19 +342,21 @@ main {
       text-align: center; }
       main section#event-details div.event-details-menu div.event-details-menu-item {
         padding: 12px 24px;
+        width: 200px;
         cursor: pointer; }
         main section#event-details div.event-details-menu div.event-details-menu-item h3 {
-          font-weight: 900;
           -webkit-transition: all 500ms ease;
           -moz-transition: all 500ms ease;
           -ms-transition: all 500ms ease;
           -o-transition: all 500ms ease;
           transition: all 500ms ease; }
         main section#event-details div.event-details-menu div.event-details-menu-item h3:hover {
+          font-weight: 900;
           color: #12424E; }
       main section#event-details div.event-details-menu div.event-details-menu-item.selected {
         border-bottom: 1px solid #12424E; }
         main section#event-details div.event-details-menu div.event-details-menu-item.selected h3 {
+          font-weight: 900;
           color: #12424E; }
     main section#event-details div#event-details-item-christian {
       display: none; }
@@ -454,11 +462,10 @@ main {
         -ms-animation-delay: 2600ms;
         -o-animation-delay: 2600ms;
         animation-delay: 2600ms; }
-    main section#event-details div.event-details-item div.event-details-logo {
+    main section#event-details div.event-details-item div.event-details-monetary-footer {
       margin: 5em 0; }
-      main section#event-details div.event-details-item div.event-details-logo img {
-        width: 50px;
-        height: auto; }
+      main section#event-details div.event-details-item div.event-details-monetary-footer h3 {
+        font-style: italic; }
   main section#event-details.hindu {
     background-color: #FFFFFF; }
     main section#event-details.hindu h1 {
@@ -510,7 +517,7 @@ main {
       -webkit-justify-content: center;
       -ms-flex-pack: center;
       justify-content: center;
-      height: 500px;
+      height: auto;
       margin: 3em 0; }
       main section#accommodations div#accommodations-container div#accommodations-map-canvas {
         -webkit-animation-delay: 800ms;
@@ -518,10 +525,11 @@ main {
         -ms-animation-delay: 800ms;
         -o-animation-delay: 800ms;
         animation-delay: 800ms;
-        height: 100%;
+        height: 500px;
         max-width: 400px;
         width: 100%;
-        margin-left: 10px;
+        margin: 10px;
+        margin-bottom: 0;
         border: 1px solid #F3F3F3;
         border-radius: 5px; }
       main section#accommodations div#accommodations-container div#accommodations-POI {
@@ -531,8 +539,9 @@ main {
         -o-animation-delay: 800ms;
         animation-delay: 800ms;
         height: 500px;
-        width: 400px;
-        margin-right: 10px;
+        max-width: 400px;
+        width: 100%;
+        margin: 10px;
         text-align: center; }
         main section#accommodations div#accommodations-container div#accommodations-POI h2 {
           font-weight: 900;
@@ -705,6 +714,8 @@ main {
       margin-top: 2em; }
       main section#goodbye div#goodbye-text h1 {
         color: #F5CB90; }
+      main section#goodbye div#goodbye-text p {
+        font-style: italic; }
   main section#footer {
     height: auto;
     padding: 0.5em;
